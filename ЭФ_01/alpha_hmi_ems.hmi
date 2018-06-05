@@ -96,6 +96,7 @@
 	<object file="Popup_Menu_Alarms.omobj"/>
 	<object file="Form_Main_Screen_1.omobj"/>
 	<object file="Form_Main_Screen_2.omobj"/>
+	<object file="Form_Local_Vent_2.omobj"/>
 	<object file="Form_Local_Vent_3.omobj"/>
 	<object file="Form_Screen_2.omobj"/>
 	<object file="Popup_Diag_Network2.omobj"/>
