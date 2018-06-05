@@ -824,9 +824,9 @@ Top_Rectangle.Navigation_Button_8.Select_Rectangle_1.Visible=false;]]>
 			<init target="Button" value="Button5"/>
 			<init target="in_ButtonText" value="Местная вентиляция"/>
 			<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="open-in-frame" frame-link="Frame_1" event="MouseClick">
-				<object access-modifier="private" uuid="8dd8dbc0-2e4f-4646-abce-9ecaa3d43ad8" base-type="Local_Vent_2" base-type-id="d93d9b4b-94a9-4c00-b2eb-6b1e400cc60e">
-					<init target="in_ControlRoom" ref="here.ControlRoom"/>
+				<object access-modifier="private" uuid="02efe193-ded6-4f97-aace-e3dbc75e547b" base-type="Form_Local_Vent_2" base-type-id="d93d9b4b-94a9-4c00-b2eb-6b1e400cc60d">
 					<init target="in_Station" ref="here.Station"/>
+					<init target="in_ControlRoom" ref="here.ControlRoom"/>
 				</object>
 			</do-on>
 			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseClick">
