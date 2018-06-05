@@ -5647,10 +5647,5 @@
 		<init target="Port_Desc_1_1" value="ПЛК АС1"/>
 		<init target="in_Server" ref="here.in_SERVER"/>
 	</object>
-	<object access-modifier="private" name="Dummy_1" display-name="Dummy_1" uuid="52f40a88-1d43-4e0e-8a7f-f6b5827b9192" base-type="Dummy_2" base-type-id="2ca545b5-5b38-49ea-9b20-7118e61e6e53">
-		<designed target="X" value="-102"/>
-		<designed target="Y" value="384"/>
-		<designed target="Rotation" value="0"/>
-	</object>
 </type>
 
