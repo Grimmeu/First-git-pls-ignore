@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<type access-modifier="private" name="Form_Local_Vent_2_1" display-name="Form_Local_Vent_2_1" uuid="d93d9b4b-94a9-4c00-b2eb-6b1e400cc60d" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
+<type access-modifier="private" name="Form_Local_Vent_2" display-name="Form_Local_Vent_2" uuid="d93d9b4b-94a9-4c00-b2eb-6b1e400cc60d" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
 	<designed target="X" value="0"/>
 	<designed target="Y" value="0"/>
 	<designed target="Rotation" value="0"/>
