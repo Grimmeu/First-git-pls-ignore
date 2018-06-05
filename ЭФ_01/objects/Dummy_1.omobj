@@ -1,0 +1,10 @@
+<type access-modifier="private" name="Dummy_1" display-name="Dummy_1" uuid="024ac8a6-89f3-460f-9600-9c49343a9126" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+</type>
+
