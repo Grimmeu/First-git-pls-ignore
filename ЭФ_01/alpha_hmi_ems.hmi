@@ -87,6 +87,7 @@
 	<object file="Object_KLU_1.omobj"/>
 	<object file="Form_Diagnostic_1.omobj"/>
 	<object file="Form_Local_Vent_1.omobj"/>
+	<object file="Form_Local_Vent_2.omobj"/>
 	<object file="Form_Main_Screen.omobj"/>
 	<object file="Form_Microclimate.omobj"/>
 	<object file="Form_Screen_1.omobj"/>
