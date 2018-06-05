@@ -1,0 +1,2025 @@
+<type access-modifier="private" name="Popup_SHUTP" display-name="Popup_SHUTP" uuid="59d52dae-c6ce-4dac-a624-e85f02abbca6" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<designed target="Width" value="420"/>
+	<designed target="Height" value="400"/>
+	<designed target="PenColor" value="4278190080"/>
+	<designed target="PenStyle" value="0"/>
+	<designed target="PenWidth" value="1"/>
+	<designed target="BrushColor" value="0xff336673"/>
+	<designed target="BrushStyle" value="1"/>
+	<designed target="WindowX" value="0"/>
+	<designed target="WindowY" value="0"/>
+	<designed target="WindowWidth" value="420"/>
+	<designed target="WindowHeight" value="400"/>
+	<designed target="WindowCaption" value="MainForm"/>
+	<designed target="ShowWindowCaption" value="true"/>
+	<designed target="ShowWindowMinimize" value="true"/>
+	<designed target="ShowWindowMaximize" value="true"/>
+	<designed target="ShowWindowClose" value="true"/>
+	<designed target="AlwaysOnTop" value="false"/>
+	<designed target="WindowSizeMode" value="0"/>
+	<designed target="WindowBorderStyle" value="1"/>
+	<designed target="WindowState" value="0"/>
+	<designed target="WindowScalingMode" value="0"/>
+	<designed target="MonitorNumber" value="0"/>
+	<designed target="WindowPosition" value="0"/>
+	<designed target="WindowCloseMode" value="0"/>
+	<param access-modifier="private" name="in_Object" display-name="in_Object" uuid="a8423fcd-278c-43a9-a17b-19b5273e39b9" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<param access-modifier="private" name="in_ControlRoom" display-name="in_ControlRoom" uuid="4451f2f3-7ea2-4451-9906-8cdeb3bb33df" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="Object" display-name="Object" uuid="49073039-d994-48c1-8b6d-1562da81bda3" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="in_Object"/>
+	</object>
+	<object access-modifier="private" name="Energy_Accum_Value" display-name="Energy_Accum_Value" uuid="ca6ac38f-61b8-455e-af49-aea2d63613fc" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="1"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Накопленная энергия"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="7ba115c2-d3b2-4cf1-9f81-148b424d2c8f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Energy_Accum.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Energy_Accum.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[Energy_Accum.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="bf87fe75-566d-49dd-bdef-3e7d6f97259d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = Energy_Accum.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[Energy_Accum_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[Energy_Accum_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Energy_Accum_Text" display-name="Energy_Accum_Text" uuid="84c8a9ba-0e01-4efa-9e66-699ebe2e6373" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73.282758620689663"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="328.71724137931034"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Накопленная энергия"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Energy_Accum.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Energy_Accum.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="M_Accum_Obr_Value" display-name="M_Accum_Obr_Value" uuid="41f34941-4ede-4044-9326-fc8562129df2" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="26"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Накопленная масса в обратном трубопроводе"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="8132b7a7-dfd6-43ed-86df-212d16cb9d1f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[M_Accum_Obr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[M_Accum_Obr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[M_Accum_Obr.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="e71facd5-27ce-4eb9-bf0f-421590db2c8a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = M_Accum_Obr.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[M_Accum_Obr_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[M_Accum_Obr_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="M_Accum_Obr_Text" display-name="M_Accum_Obr_Text" uuid="174de617-106c-47b7-bb6a-f3bf47dac203" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73.282758620689663"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="328.71724137931034"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Накопленная масса в обратном трубопроводе"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[M_Accum_Obr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[M_Accum_Obr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="M_Accum_Pr_Value" display-name="M_Accum_Pr_Value" uuid="e5124aaf-1daa-4ef5-be2b-fdb8e9384206" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="50"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Накопленная масса в прямом трубопроводе"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="f520fd04-5b89-4fe3-8aa1-1cff57a20f61" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[M_Accum_Pr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[M_Accum_Pr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[M_Accum_Pr.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="e6d9a128-eb16-4d20-8387-193086fff0b4" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = M_Accum_Pr.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[M_Accum_Pr_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[M_Accum_Pr_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="M_Accum_Pr_Text" display-name="M_Accum_Pr_Text" uuid="6618a572-863e-4705-aad1-bab5f7244b3d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73.141379310344831"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="328.71724137931028"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Накопленная масса в прямом трубопроводе"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[M_Accum_Pr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[M_Accum_Pr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="P_Obr_Value" display-name="P_Obr_Value" uuid="e7216869-d4a2-4706-9c3e-155d5b7a64ea" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="75"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Давление (избыточное) в обратном трубопроводе"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="24602084-0bc0-4046-bb76-105577d68045" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[P_Obr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[P_Obr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[P_Obr.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="20cc3361-fed9-4f36-9bf5-b53527a6b777" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = P_Obr.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[P_Obr_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[P_Obr_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="P_Obr_Text" display-name="P_Obr_Text" uuid="393ac8e8-e142-4c2d-88f7-6af783e6d97c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73.141379310344831"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="328.71724137931028"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="авление (избыточное) в обратном трубопроводе"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[P_Obr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[P_Obr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="P_Pr_Value" display-name="P_Pr_Value" uuid="4005406b-a7b4-49c5-a989-e0aa2096c7f7" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="100"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Давление (избыточное) в прямом трубопроводе"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="47de4b03-b00d-477b-920e-a570878a242b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[P_Pr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[P_Pr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[P_Pr.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="09984b28-a814-4dcd-bff9-e563c0ab5171" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = P_Pr.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[P_Pr_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[P_Pr_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="P_Pr_Text" display-name="P_Pr_Text" uuid="09dc33d1-3e59-41ef-bfc5-062d4740c6af" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73.141379310344831"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="328.71724137931028"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Давление (избыточное) в прямом трубопроводе"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[P_Pr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[P_Pr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="P_Water_Value" display-name="P_Water_Value" uuid="7a905e57-4f90-49c7-828a-4bfc03e5a81c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="125"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Давление (избыточное) холодной воды"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="705b6dcb-cbfb-46c7-8529-2de663acff88" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[P_Water.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[P_Water.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[P_Water.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="73ecf13d-7f34-4f08-9e99-9d9da91e47f5" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = P_Water.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[P_Water_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[P_Water_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="P_Water_Text" display-name="P_Water_Text" uuid="47fd1e35-323e-4c2f-921b-552444cacbbb" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73.141379310344831"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="328.71724137931028"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Давление (избыточное) холодной воды"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[P_Water.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[P_Water.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="Power_Value" display-name="Power_Value" uuid="92987b62-7f0e-4d94-a840-eba57dda9ab1" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="149"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Потребляемая тепловая мощность"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="a29fdc74-b651-4d06-9fbd-19a0d920162c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Power.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Power.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[Power.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="2e64a660-47b0-4f5c-b48e-654d7f71be2a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = Power.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[Power_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[Power_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Power_Text" display-name="Power_Text" uuid="e0f17eb5-e326-428d-a9e4-3188864d7ae4" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="328.71724137931034"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Потребляемая тепловая мощность"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Power.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Power.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="Rate_Obr_Value" display-name="Rate_Obr_Value" uuid="cb92433a-b58e-4a9a-b38c-cfb4314481b8" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="174"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Расход в обратном трубопроводе"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="4b2ac016-1b75-48c8-99c8-c4dad9a89af8" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Rate_Obr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Rate_Obr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[Rate_Obr.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="f0bcc43c-02c7-4943-b259-8ee31b5b7b4c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = Rate_Obr.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[Rate_Obr_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[Rate_Obr_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Rate_Obr_Text" display-name="Rate_Obr_Text" uuid="9b74034b-25a5-4f95-a34c-44500ce4e716" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="328.71724137931034"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Расход в обратном трубопроводе"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Rate_Obr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Rate_Obr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="Rate_Pr_Value" display-name="Rate_Pr_Value" uuid="ec8d4445-ffe3-49a8-8943-6db04be945b0" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="199"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Расход в прямом трубопроводе"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="56668930-f2f8-4e98-984b-c596d1ed566b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Rate_Pr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Rate_Pr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[Rate_Pr.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="b295ced2-6426-4878-acf9-5f96f8d4d746" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = Rate_Pr.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[Rate_Pr_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[Rate_Pr_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Rate_Pr_Text" display-name="Rate_Pr_Text" uuid="e029a3e2-b7e6-4eae-8390-55470eb56d5a" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73.455172413793093"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="353.54482758620691"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Расход в прямом трубопроводе"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Rate_Pr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Rate_Pr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="Status_Value" display-name="Status_Value" uuid="df2d7fd3-5ade-4d12-88dc-5b85d7c6e3f8" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="224"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Состояние теплосчётчика Регистр состояния"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="d07d86c6-1bc7-4d95-8a72-a1bc24ed367e" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Status.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Status.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[Status.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="539fe805-bfff-443f-a432-9abcb47c8807" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = Status.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[Status_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[Status_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Status_Text" display-name="Status_Text" uuid="8c1c2eb8-c65b-4cfe-b3be-2375d4c1fd35" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73.455172413793093"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="353.54482758620691"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Состояние теплосчётчика Регистр состояния"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Status.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Status.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="StatusTI_Value" display-name="StatusTI_Value" uuid="4dbb90ea-a11d-48ca-a5d2-a5167669eb55" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="248"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Состояние измеряемых величин Регистр состояния"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="0712a9f2-0993-4e66-bc76-66574d9f1491" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[StatusTI.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[StatusTI.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[StatusTI.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="9f0b75fc-2cb1-491f-8ffc-90bdca3070e3" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = StatusTI.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[StatusTI_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[StatusTI_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="StatusTI_Text" display-name="StatusTI_Text" uuid="fa0ddd39-8408-409c-82b7-6ecd7d9840cc" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73.227586206896603"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="353.54482758620691"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Состояние измеряемых величин Регистр состояния"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[StatusTI.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[StatusTI.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="T_Obr_Value" display-name="T_Obr_Value" uuid="1170771f-d241-4561-8c87-8b2f068e9afa" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="273"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Температура в обратном трубопроводе"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="a9e555e6-adba-48c1-a126-15931f77f9f0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[T_Obr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[T_Obr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[T_Obr.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="f779dcb5-ea5b-41f9-a93e-d8e3b724ff8a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = T_Obr.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[T_Obr_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[T_Obr_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="T_Obr_Text" display-name="T_Obr_Text" uuid="f68f4f7d-6b26-48b1-bbdc-8eda7e78eed3" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73.227586206896603"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="353.54482758620691"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Температура в обратном трубопроводе"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[T_Obr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[T_Obr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="T_Pr_Value" display-name="T_Pr_Value" uuid="46bb4e46-aa9e-44b0-837b-03888c4d51bb" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="298"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Температура в прямом трубопроводе"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="42379bdd-5178-4d4d-a320-3bb2c884327c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[T_Pr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[T_Pr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[T_Pr.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="8f867abd-7d00-4923-89ef-dd204c990683" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = T_Pr.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[T_Pr_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[T_Pr_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="T_Pr_Text" display-name="T_Pr_Text" uuid="52bc031b-a340-4071-b975-969edb18ecfa" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73.227586206896603"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="353.54482758620691"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Температура в прямом трубопроводе"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[T_Pr.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[T_Pr.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="T_Water_Value" display-name="T_Water_Value" uuid="0679c777-13e5-4c14-9b57-b14f8664a129" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="323"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Температура холодной воды"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="ddb9681f-6966-45f5-9a6c-f5edad7a84d0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[T_Water.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[T_Water.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[T_Water.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="a2f94245-d81a-41c6-8c29-4318bf28c96d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = T_Water.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[T_Water_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[T_Water_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="T_Water_Text" display-name="T_Water_Text" uuid="82cbf311-bf53-4a62-a212-3f6567d20604" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73.227586206896603"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="353.54482758620691"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Температура холодной воды"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[T_Water.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[T_Water.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="Time_Value" display-name="Time_Value" uuid="352564f0-f70f-4559-a4be-b2407f2e0182" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="347"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Время нормальной работы теплосчётчика"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="e9394a06-a6fb-4453-931b-7b6433f22f67" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Time.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Time.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[Time.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="5d5a5e4f-c661-4a68-b8c1-9e482afd6be6" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = Time.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[Time_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[Time_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Time_Text" display-name="Time_Text" uuid="339843ba-9b23-4d62-b6a2-08a37224c671" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="353.54482758620691"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Время нормальной работы теплосчётчика"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Time.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Time.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="V_Accum_Value" display-name="V_Accum_Value" uuid="8ab4a521-cda2-4ccc-ace8-a1223542909e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="372"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Накопленный объем по импульсному входу"/>
+		<designed target="Width" value="69"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Value" display-name="Value" uuid="4323ce65-0687-4d92-8c4c-707b67c2b95a" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.3944444444444315"/>
+			<designed target="Y" value="-0.10000000000005116"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<conditional-expr>
+					<condition>
+						<![CDATA[V_Accum.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["****"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[V_Accum.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[V_Accum.ValueAsString]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="e56ac15e-144e-4253-8747-8527d36dc790" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0.20555555555557703"/>
+				<designed target="Y" value="0.37666666666677884"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="68.333333333333428"/>
+				<designed target="Height" value="19.833333333333314"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+					<body kind="javascript">
+						<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = V_Accum.Path;
+Action_Context.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[V_Accum_Value.Value.Select_Rectangle.Visible = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[V_Accum_Value.Value.Select_Rectangle.Visible = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="V_Accum_Text" display-name="V_Accum_Text" uuid="625ff675-9105-4c13-ad56-ebe4c3ea5914" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="73"/>
+			<designed target="Y" value="0.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="353.54482758620691"/>
+			<designed target="Height" value="19.5"/>
+			<designed target="Text" value="Накопленный объем по импульсному входу"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff000000"/>
+			<designed target="TextAlignment" value="129"/>
+			<do-trace access-modifier="private" target="FontColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[V_Accum.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff808080]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[V_Accum.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="Energy_Accum" display-name="Energy_Accum" uuid="f72f46ce-1ab3-425b-bb71-cde514b243c5" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.Energy_Accum"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="M_Accum_Obr" display-name="M_Accum_Obr" uuid="25e684fc-9c5f-4a3d-8b41-7808a6654862" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.M_Accum_Obr"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="M_Accum_Pr" display-name="M_Accum_Pr" uuid="2a379ded-440b-43e9-9a41-dc9c6ad0c763" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.M_Accum_Pr"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="P_Obr" display-name="P_Obr" uuid="38f427b6-da83-4c6a-ac0c-a3a683e66fb8" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.P_Obr"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="P_Pr" display-name="P_Pr" uuid="945a8d6e-3e2f-4f50-b8b6-800d627bc606" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.P_Pr"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="P_Water" display-name="P_Water" uuid="5cacdbeb-39c0-49b6-9eaf-06f20922a31a" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.P_Water"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="Power" display-name="Power" uuid="4c1903ab-eec2-4168-80d7-b5d82238b062" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.Power"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="Rate_Obr" display-name="Rate_Obr" uuid="4b19b9e6-07a0-4d4f-8526-6c37c3fc379b" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.Rate_Obr"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="Rate_Pr" display-name="Rate_Pr" uuid="ba6c3866-4e7f-4505-a56f-774c4f41b423" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.Rate_Pr"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="Status" display-name="Status" uuid="417d9385-329b-4824-be5a-d2bae88aac6e" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.Status"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="StatusTI" display-name="StatusTI" uuid="fc1ae8c4-496b-4b0e-afe4-ad5dfb0198b0" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.StatusTI"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="T_Obr" display-name="T_Obr" uuid="e5ed75a3-c03d-4c45-8d99-b898cb1f3ee4" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.T_Obr"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="T_Pr" display-name="T_Pr" uuid="0775e364-9754-4799-9f64-a9085d2eafc1" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.T_Pr"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="T_Water" display-name="T_Water" uuid="7fde031d-d382-4798-a99c-ff95c0f59f89" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.T_Water"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="Time" display-name="Time" uuid="3cca0a2e-970f-43ea-a5a3-43c02de4d92e" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.Time"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="V_Accum" display-name="V_Accum" uuid="67a98d5a-7f9e-4347-8cd1-abe397868642" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Heat_Сounter.V_Accum"/>
+		<init target="Source" ref="Object"/>
+	</object>
+</type>
+

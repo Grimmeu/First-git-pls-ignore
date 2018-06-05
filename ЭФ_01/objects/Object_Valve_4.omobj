@@ -1,0 +1,198 @@
+<type access-modifier="private" name="Object_Valve_4" display-name="Object_Valve_4" uuid="f0555bde-acb3-4739-ae1a-8d66fec6c015" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<object access-modifier="private" name="Name" display-name="Name" uuid="bb52ed18-b6b5-4360-93dc-ed9e8d21ae69" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Name"/>
+		<init target="Source" ref="here.in_Object1"/>
+	</object>
+	<object access-modifier="private" name="Remote" display-name="Remote" uuid="7c850697-6d36-4162-a2c4-c7290eae2804" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Remote"/>
+		<init target="Source" ref="here.in_Object1"/>
+	</object>
+	<object access-modifier="private" name="Sysinflt" display-name="Sysinflt" uuid="5a02186d-43fb-47c7-bde4-179f8ade3ee0" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Sysinflt"/>
+		<init target="Source" ref="here.in_Object1"/>
+	</object>
+	<object access-modifier="private" name="Valve_1" display-name="Valve_1" uuid="5f8a0c2a-22d2-4b6e-9a6e-6219f409d4d3" base-type="Valve" base-type-id="61695f8d-5b5b-4b5f-ac7a-501d621cb42a">
+		<designed target="X" value="9"/>
+		<designed target="Y" value="18"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object" ref="here.in_Object1"/>
+	</object>
+	<object access-modifier="private" name="Valve_2" display-name="Valve_2" uuid="07da00ec-2b4c-4063-a1f6-8e6f43082fc5" base-type="Valve" base-type-id="61695f8d-5b5b-4b5f-ac7a-501d621cb42a">
+		<designed target="X" value="54"/>
+		<designed target="Y" value="18"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object" ref="here.in_Object2"/>
+	</object>
+	<object access-modifier="private" name="Valve_3" display-name="Valve_3" uuid="b4eef999-053c-40e9-a5df-7aeddbbc487f" base-type="Valve" base-type-id="61695f8d-5b5b-4b5f-ac7a-501d621cb42a">
+		<designed target="X" value="99"/>
+		<designed target="Y" value="18"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object" ref="here.in_Object3"/>
+	</object>
+	<object access-modifier="private" name="Valve_4" display-name="Valve_4" uuid="d6452430-aca0-40fe-97bb-18fd0b03ecfb" base-type="Valve" base-type-id="61695f8d-5b5b-4b5f-ac7a-501d621cb42a">
+		<designed target="X" value="144"/>
+		<designed target="Y" value="18"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object" ref="here.in_Object4"/>
+	</object>
+	<object access-modifier="private" name="RemoteControl_Rectangle" display-name="RemoteControl_Rectangle" uuid="86459df3-78f2-4050-9a88-125ee616334a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="86"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Включен дистанционный режим управления"/>
+		<designed target="Width" value="25"/>
+		<designed target="Height" value="19.000000000000028"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xffffff00"/>
+		<designed target="BrushStyle" value="1"/>
+		<do-trace access-modifier="private" target="BrushColor">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Remote == 1 && Sysinflt == 0]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffffff00]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Remote == 1 && Sysinflt == 1]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffa2a2a2]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="Visible">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Remote.Quality<192]]>
+				</condition>
+				<expr>
+					<![CDATA[false]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Remote == 1]]>
+				</condition>
+				<expr>
+					<![CDATA[true]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Remote == 0]]>
+				</condition>
+				<expr>
+					<![CDATA[false]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<object access-modifier="private" name="RemoteControl_Text" display-name="RemoteControl_Text" uuid="5044f250-4c73-492c-9cbe-c566bdaf94e9" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0.80000000000006821"/>
+			<designed target="Y" value="0.73333333333334849"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="25"/>
+			<designed target="Height" value="19"/>
+			<designed target="Text" value="ДУ"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="4278190080"/>
+			<designed target="TextAlignment" value="132"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="c25a76d3-7af9-47f0-818c-5fdd3c940f03" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="false"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="193"/>
+		<designed target="Height" value="60"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="3"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="open-new" event="MouseClick">
+			<object access-modifier="private" uuid="42b9bb1d-b639-4d80-b574-66f304d43615" base-type="Valve_control" base-type-id="cf50fb25-9460-4341-af8b-d22f861ee873">
+				<init target="in_Object" ref="here.Object"/>
+				<init target="in_ControlRoom" ref="here.ControlRoom"/>
+			</object>
+		</do-on>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+			<body kind="javascript">
+				<![CDATA[Action_Context.OpenAtX = ScreenX(110, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-40);
+
+Action_Context.Invoke();]]>
+			</body>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+		<body kind="javascript">
+			<![CDATA[Select_Rectangle.Visible = true]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+		<body kind="javascript">
+			<![CDATA[Select_Rectangle.Visible = false]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Alias" display-name="Alias" uuid="9098ddc7-bac2-42ab-adf0-465494db73de" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<param access-modifier="private" name="in_ControlRoom" display-name="in_ControlRoom" uuid="d93f628a-2d65-4b35-9808-99b651f344c8" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="Action_Context" display-name="Action_Context" uuid="7a971920-0a10-42a3-b6fc-bcc5dcf37367" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95">
+		<designed target="Enabled" value="true"/>
+		<designed target="InvokeTrigger" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="open-new" event="Invoked">
+			<object access-modifier="private" uuid="dfa493c4-1206-4fff-a65e-9823d56462e4" base-type="Alarms" base-type-id="345ca3a2-de06-4691-971a-d1d738420780">
+				<init target="WindowX" ref="Action_Context.OpenAtX"/>
+				<init target="WindowY" ref="Action_Context.OpenAtY"/>
+				<init target="Alias" ref="here.Alias"/>
+			</object>
+		</do-on>
+		<object access-modifier="private" name="OpenAtX" display-name="OpenAtX" uuid="8588a80b-6b2c-4ba5-8498-0d629ff1dedb" base-type="int32" base-type-id="74222947-f188-4195-8e0e-e33bd9827255"/>
+		<object access-modifier="private" name="OpenAtY" display-name="OpenAtY" uuid="52e836fa-229d-448e-adbf-3b5fc2e0aca0" base-type="int32" base-type-id="74222947-f188-4195-8e0e-e33bd9827255"/>
+	</object>
+	<object access-modifier="private" name="ControlRoom" display-name="ControlRoom" uuid="d77218db-fd02-45b5-8a97-f3d2f8a679f6" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="here.in_ControlRoom"/>
+	</object>
+	<object access-modifier="private" name="Object" display-name="Object" uuid="054ef740-75d1-496a-b28b-9644dba98107" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="here.in_Object1"/>
+	</object>
+	<param access-modifier="private" name="in_Object1" display-name="in_Object1" uuid="efa65709-6ccb-4f46-9ecf-74caa06b4e23" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<param access-modifier="private" name="in_Object2" display-name="in_Object2" uuid="2de558b2-b8b0-408e-b333-e268c8a009b6" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<param access-modifier="private" name="in_Object3" display-name="in_Object3" uuid="df91a3d0-3dd6-4ef9-807c-ba733bfdfef7" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<param access-modifier="private" name="in_Object4" display-name="in_Object4" uuid="19c43a3e-ee13-415e-abcf-75b0ea0f46fb" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+</type>
+

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Popup_Login_Error" display-name="Popup_Login_Error" uuid="df1ed03f-d3d2-49c8-bffb-2f2e8e824ee4" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<designed target="Width" value="350"/>
+	<designed target="Height" value="200"/>
+	<designed target="PenColor" value="4278190080"/>
+	<designed target="PenStyle" value="0"/>
+	<designed target="PenWidth" value="1"/>
+	<designed target="BrushColor" value="4293980400"/>
+	<designed target="BrushStyle" value="1"/>
+	<designed target="WindowX" value="800"/>
+	<designed target="WindowY" value="400"/>
+	<designed target="WindowWidth" value="350"/>
+	<designed target="WindowHeight" value="200"/>
+	<designed target="WindowCaption" value="Ошибка регистрации пользователя в системе"/>
+	<designed target="WindowBorderStyle" value="2"/>
+	<designed target="ShowWindowCaption" value="true"/>
+	<designed target="ShowWindowMinimize" value="false"/>
+	<designed target="ShowWindowMaximize" value="false"/>
+	<designed target="ShowWindowClose" value="true"/>
+	<designed target="WindowSizeMode" value="0"/>
+	<designed target="WindowScalingMode" value="0"/>
+	<designed target="WindowCloseMode" value="0"/>
+	<object access-modifier="private" name="LoginButton_1" display-name="LoginButton_1" uuid="fc4cc0a1-fa31-4539-8de6-4c5dad19c2cb" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1">
+		<designed target="X" value="140"/>
+		<designed target="Y" value="163"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Width" value="65"/>
+		<designed target="Height" value="30"/>
+		<designed target="Text" value="ОК"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Tooltip"/>
+		<designed target="Font" value="Tahoma,9,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Enabled" value="true"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="close" event="ButtonPressed"/>
+	</object>
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="0e398b9b-7d41-4511-a3cb-4227e4380af9" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd">
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ConnectedChanged">
+			<body kind="javascript">
+				<![CDATA[// Если соединения нет - выводим ошибку
+if(!SecurityContext.Connected)
+{
+	here.Error_Text.Text = "Причина: "+SecurityContext.ConnectionError;
+	//here.Error_Text.Text.Color = 0xffaa3b3b;
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Error_Text" display-name="Error_Text" uuid="a433cfb0-b061-4c43-bc79-50b414b0f7a5" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="27"/>
+		<designed target="Y" value="59"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip"/>
+		<designed target="Width" value="300"/>
+		<designed target="Height" value="100"/>
+		<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="TextAlignment" value="129"/>
+		<designed target="Text" value="Text"/>
+	</object>
+	<object access-modifier="private" name="Error_Text_Header" display-name="Error_Text_Header" uuid="078c2343-a3a2-4267-a182-c216c072b727" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="16"/>
+		<designed target="Y" value="16"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip"/>
+		<designed target="Width" value="321.00000000000006"/>
+		<designed target="Height" value="41"/>
+		<designed target="Font" value="Tahoma,12,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="0xffff0000"/>
+		<designed target="TextAlignment" value="132"/>
+		<designed target="Text" value="Регистрация пользователя в системе невозможна!"/>
+	</object>
+	<designed target="AlwaysOnTop" value="false"/>
+	<designed target="WindowState" value="0"/>
+	<designed target="MonitorNumber" value="0"/>
+	<designed target="WindowPosition" value="0"/>
+</type>
+

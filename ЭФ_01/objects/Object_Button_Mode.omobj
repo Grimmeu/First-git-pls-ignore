@@ -1,0 +1,211 @@
+<type access-modifier="private" name="Object_Button_Mode" display-name="Object_Button_Mode" uuid="6255836f-82a9-450a-9d68-a83beb929073" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<object access-modifier="private" name="Control_Button_Shadow_1" display-name="Control_Button_Shadow_1" uuid="9af22da4-1742-47b8-afcc-041e805db4b8" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="60"/>
+		<designed target="Height" value="60"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xffb4b4b4"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Control_Button" display-name="Control_Button" uuid="08c341e5-ac6e-48c1-b39f-d58151f30c7e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="-4"/>
+			<designed target="Y" value="-4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="60"/>
+			<designed target="Height" value="60"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xffffffff"/>
+			<designed target="PenStyle" value="0"/>
+			<designed target="PenWidth" value="3"/>
+			<designed target="BrushColor" value="4278190080"/>
+			<designed target="BrushStyle" value="0"/>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[Control_Rectangle.Visible=true;
+Control1.Width=63;
+Control1.Height=63;
+Control2.Width=63;
+Control2.Height=63;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[Control_Rectangle.Visible=false;
+Control1.Width=60;
+Control1.Height=60;
+Control2.Width=60;
+Control2.Height=60;]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="Control_Rectangle" display-name="Control_Rectangle" uuid="8b4d6b23-091c-43ab-bf30-3a762df9744a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="false"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="64"/>
+				<designed target="Height" value="64"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="3"/>
+				<designed target="BrushColor" value="0xff000000"/>
+				<designed target="BrushStyle" value="0"/>
+			</object>
+			<object access-modifier="private" name="Control1" display-name="Control1" uuid="5a062531-c406-4d00-b8ce-ecaf0332ca62" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value="Передача управления между диспетчерскими пунктами"/>
+				<designed target="Width" value="60"/>
+				<designed target="Height" value="60"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="0"/>
+				<designed target="PenWidth" value="1"/>
+				<designed target="ImageFile" value="Control1"/>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseClick">
+				<body kind="om">
+					<![CDATA[if (here.EnableTU_BoolToken.Value==true && !SecurityContext.GuestMode)
+{	
+	here.SendTUControl_Action_Granted.Invoke();
+}
+else
+{
+	here.SendTU_Action_Denied.Invoke();
+}]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="Control2" display-name="Control2" uuid="4e24f7ee-04ef-4c6e-8016-bb5051fcfdc3" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value="Передача управления между диспетчерскими пунктами"/>
+				<designed target="Width" value="60"/>
+				<designed target="Height" value="60"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="0"/>
+				<designed target="PenWidth" value="1"/>
+				<designed target="ImageFile" value="Control2"/>
+			</object>
+		</object>
+	</object>
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="733c72c7-fda1-47fb-9362-41962f194712" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd">
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="CurrentUserChanged">
+			<body kind="javascript">
+				<![CDATA[if (SecurityContext.GuestMode)
+	{
+	here.Bottom_Rectangle.Register_Info_Shadow.GroupRectangle.GroupName.Text="";
+	here.Bottom_Rectangle.Register_Info_Shadow.UserRectangle.UserName.Text="Незарегистрированный";
+	AlphaAlarmsAxControl_1.LogOff();
+	AlphaAlarmsAxControl_2.LogOff();
+	GenSource.Value="<Subcondition Message='. АРМ "+here.Network_1.ComputerName+". Отсутствует зарегистрированный пользователь. Используется гостевой доступ' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+	//here.SecurityContext.AsyncLogin("Оператор", "1");
+	}
+else
+{ 
+	here.Bottom_Rectangle.Register_Info_Shadow.GroupRectangle.GroupName.Text=here.SecurityContext.GroupDisplayName(here.SecurityContext.CurrentUser);
+	here.Bottom_Rectangle.Register_Info_Shadow.UserRectangle.UserName.Text=here.SecurityContext.CurrentUserDisplayName;
+	AlphaAlarmsAxControl_1.LogOn(SecurityContext.CurrentUser);
+	AlphaAlarmsAxControl_2.LogOn(SecurityContext.CurrentUser);
+	GenSource.Value="<Subcondition Message='. АРМ "+here.Network_1.ComputerName+". Регистрация пользователя под учетной записью "+here.SecurityContext.CurrentUser+" выполнена успешно' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+	}
+ ]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ConnectedChanged">
+			<body kind="javascript">
+				<![CDATA[if (SecurityContext.Connected) //& !SecurityContext.GuestMode)
+	{
+	//here.Bottom_Rectangle.Register_Info_Shadow.GroupRectangle.GroupName.Text="";
+	//here.Bottom_Rectangle.Register_Info_Shadow.UserRectangle.UserName.Text="Незарегистрированный";
+	//GenSource.Value="<Subcondition Message='. АРМ "+here.Network_1.ComputerName+". Установлена связь со службой регистрации пользователей' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+	here.SecurityContext.AsyncLogin("Оператор", "1");	
+	}
+else
+	{
+	here.Bottom_Rectangle.Register_Info_Shadow.GroupRectangle.GroupName.Text="";
+	here.Bottom_Rectangle.Register_Info_Shadow.UserRectangle.UserName.Text="Незарегистрированный"
+	GenSource.Value="<Subcondition Message='. АРМ "+here.Network_1.ComputerName+". Отсутствует связь со службой регистрации пользователей. "+here.SecurityContext.ConnectionError+" ' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+	}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="EnableTU_BoolToken" display-name="EnableTU_BoolToken" uuid="4ae628fc-f001-423e-963b-dee578b177c7" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59">
+		<init target="Right" value="EnableTU"/>
+		<init target="SecurityContext" ref="here.SecurityContext"/>
+		<init target="Application" value="Alpha.HMI"/>
+	</object>
+	<object access-modifier="private" name="SendTUControl_Action_Granted" display-name="SendTUControl_Action_Granted" uuid="c04b558d-3c40-417f-a262-93b8dbcf43af" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95">
+		<designed target="Enabled" value="true"/>
+		<designed target="InvokeTrigger" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="open-dialog" event="Invoked">
+			<object access-modifier="private" uuid="8b6e0c2a-2995-4423-87f7-eb303033dca0" base-type="Send_TUControl" base-type-id="feb97c57-70ce-4d4d-bca3-d59674dcb339">
+				<init target="in_Station" ref="here.Station"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SendTU_Action_Denied" display-name="SendTU_Action_Denied" uuid="8fc6fa26-2821-4abb-b0c9-afbdbb910e9f" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95">
+		<designed target="Enabled" value="true"/>
+		<designed target="InvokeTrigger" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="open-dialog" event="Invoked">
+			<object access-modifier="private" uuid="3990c4ea-edd0-44eb-8e71-951c3543dc7b" base-type="Exit_Denied" base-type-id="163ecc5b-1a1f-40ca-9b24-952a950c2981">
+				<init target="Error" value="Недостаточно прав для подачи команд телеуправления!"/>
+			</object>
+		</do-on>
+	</object>
+	<param access-modifier="private" name="In_Station" display-name="In_Station" uuid="b5c5b375-3066-42e3-95fd-def577995524" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="Station" display-name="Station" uuid="793d18d9-5bbc-40c3-9283-9adbef7bb836" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="here.In_Station"/>
+	</object>
+	<object access-modifier="private" name="Mode" display-name="Mode" uuid="0c0dd75e-fb8f-4a73-bbe4-6367ad1541d7" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="OnValueChanged">
+			<body kind="om">
+				<![CDATA[if(Mode.Value==0)
+{
+	Control_Button_Shadow_1.Control_Button.Control1.Visible=true;
+	Control_Button_Shadow_1.Control_Button.Control2.Visible=false;
+}
+else
+{
+	Control_Button_Shadow_1.Control_Button.Control1.Visible=false;
+	Control_Button_Shadow_1.Control_Button.Control2.Visible=true;
+}
+]]>
+			</body>
+		</do-on>
+		<init target="Source" ref="here.In_Station"/>
+		<init target="Path" value="Mode"/>
+	</object>
+</type>
+

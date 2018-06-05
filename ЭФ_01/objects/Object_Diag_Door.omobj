@@ -1,0 +1,136 @@
+<type access-modifier="private" name="Object_Diag_Door" display-name="Object_Diag_Door" uuid="7ffbf68e-21ad-4e8f-8c3f-bcac2ee8f763" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value="Дверная сигнализация ЩУ:
+желтый фон - Дверь открыта
+серый фон - Дверь закрыта"/>
+	<object access-modifier="private" name="Rectangle" display-name="Rectangle" uuid="330f37ba-5e2d-46cc-ad91-27bae1b397e5" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="35"/>
+		<designed target="Height" value="35"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff919191"/>
+		<designed target="BrushStyle" value="1"/>
+		<do-trace access-modifier="private" target="BrushColor">
+			<conditional-expr>
+				<condition>
+					<![CDATA[here.Signal.Value==1 && here.Signal.Quality>=192]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffffff00]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[here.Signal.Value!=1 || here.Signal.Quality<192]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff919191]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="9fd5c6e0-f93e-49ec-8ec5-271ac3e2f045" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba">
+			<designed target="X" value="7.5"/>
+			<designed target="Y" value="27.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="20"/>
+			<designed target="Height" value="20"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="4278190080"/>
+			<designed target="BrushStyle" value="0"/>
+			<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="b18c6122-6d58-4543-8468-ca4afb8abeb4" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+			</object>
+			<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="6f0f8c31-7fd0-48f0-af69-6617d943559d" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="-20"/>
+			</object>
+			<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="5e7813ca-edc7-4c76-b648-2b5dc781aef2" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="20"/>
+				<designed target="Y" value="-20"/>
+			</object>
+			<object access-modifier="private" name="Point_4" display-name="Point_4" uuid="6a7da781-a7f6-489e-a911-49a444babf66" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="20"/>
+				<designed target="Y" value="0"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="d930add5-bae0-4b1a-8f82-2037fdc3ae04" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba">
+			<designed target="X" value="16"/>
+			<designed target="Y" value="28"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="10"/>
+			<designed target="Height" value="19"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="4278190080"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="99eacd4b-203f-43b2-b391-5e9de67752f6" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="-5"/>
+			</object>
+			<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="ba81b5b3-3944-439b-9f58-0836c50ed4ce" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="-19"/>
+			</object>
+			<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="f65c0477-e09c-4bd6-8174-24e1b6f8d66c" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="10"/>
+				<designed target="Y" value="-19"/>
+			</object>
+			<object access-modifier="private" name="Point_4" display-name="Point_4" uuid="4b868a31-e13d-4619-8ae4-350d0b32eb98" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="10"/>
+				<designed target="Y" value="0"/>
+			</object>
+			<object access-modifier="private" name="Point_5" display-name="Point_5" uuid="120444a6-89f1-4e8a-a8eb-244e5a5f2290" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="-5"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Ellipse" display-name="Ellipse" uuid="f03a5d37-7adc-485b-9e10-aa932805252d" base-type="Ellipse" base-type-id="7f9e9b77-5d97-45c4-89c1-0f67adb636cd">
+			<designed target="X" value="16"/>
+			<designed target="Y" value="15"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="3"/>
+			<designed target="Height" value="3"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="0"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffffffff"/>
+			<designed target="BrushStyle" value="1"/>
+		</object>
+	</object>
+	<param access-modifier="private" name="in_Signal" display-name="in_Signal" uuid="3b65cec7-db73-4e1f-9ee5-0cb6d64cbea2" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="Signal" display-name="Signal" uuid="d63b9dfa-ab20-491c-8c79-f7c0ed5d9daa" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Source" ref="here.in_Signal"/>
+	</object>
+</type>
+

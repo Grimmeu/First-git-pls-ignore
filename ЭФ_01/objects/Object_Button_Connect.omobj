@@ -1,0 +1,100 @@
+<type access-modifier="private" name="Object_Button_Connect" display-name="Object_Button_Connect" uuid="3573bbcd-e383-4e0d-a703-7825e0398550" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<object access-modifier="private" name="Connection_Button_Shadow" display-name="Connection_Button_Shadow" uuid="bbc06e18-ba00-4f91-a413-31407daa7084" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="60.66666666666697"/>
+		<designed target="Height" value="60.999999999999993"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xffb4b4b4"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Connection_ON" display-name="Connection_ON" uuid="6ee21dd5-f215-47fb-800c-26b0ab1a0bbc" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138">
+			<designed target="X" value="-4"/>
+			<designed target="Y" value="-4.0000000000000036"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value="Наличие соединения с сервером"/>
+			<designed target="Width" value="60"/>
+			<designed target="Height" value="60"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="0"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="ImageFile" value="Connected"/>
+			<designed target="Visible" value="true"/>
+		</object>
+		<object access-modifier="private" name="Connection_OFF" display-name="Connection_OFF" uuid="4f67f8c4-bc81-49df-80d9-b2dd6492bb66" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138">
+			<designed target="X" value="-4"/>
+			<designed target="Y" value="-4.0000000000000036"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value="Отсутствует соединение с сервером"/>
+			<designed target="Width" value="60"/>
+			<designed target="Height" value="60"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="0"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="ImageFile" value="Disconnected"/>
+			<designed target="Visible" value="true"/>
+			<do-trace access-modifier="private" target="Visible">
+				<body>
+					<![CDATA[((Server1Chanel1Connected.Value==0) || (Server1Chanel1Connected.Quality<192)) && ((Server1Chanel2Connected.Value==0) || (Server1Chanel2Connected.Quality<192)) && ((Server2Chanel1Connected.Value==0) || (Server2Chanel1Connected.Quality<192)) && ((Server2Chanel2Connected.Value==0) || (Server2Chanel2Connected.Quality<192))]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="Server1Chanel1Connected" display-name="Server1Chanel1Connected" uuid="4f4b346f-517c-498f-97fd-f58ed1698ae0" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.HUB Module.Source 1.Server 1.Channels.Channel 1.Active"/>
+		<init target="Source" ref="here.in_SERVER"/>
+	</object>
+	<object access-modifier="private" name="Server1Chanel2Connected" display-name="Server1Chanel2Connected" uuid="c8093b8e-c54a-4b8e-b0b6-3fab52fe228b" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.HUB Module.Source 1.Server 1.Channels.Channel 2.Active"/>
+		<init target="Source" ref="here.in_SERVER"/>
+	</object>
+	<object access-modifier="private" name="Server2Chanel1Connected" display-name="Server2Chanel1Connected" uuid="357567ea-0b86-44e0-bf8f-6b78221be4f5" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.HUB Module.Source 1.Server 2.Channels.Channel 1.Active"/>
+		<init target="Source" ref="here.in_SERVER"/>
+	</object>
+	<object access-modifier="private" name="Server2Chanel2Connected" display-name="Server2Chanel2Connected" uuid="55c6fe28-d187-4bd8-a99c-792ea1f5a7d6" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.HUB Module.Source 1.Server 2.Channels.Channel 2.Active"/>
+		<init target="Source" ref="here.in_SERVER"/>
+	</object>
+	<param access-modifier="private" name="in_SERVER" display-name="in_SERVER" uuid="44355998-3cbc-4e5b-8873-2cc8faae6a7f" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="SERVER" display-name="SERVER" uuid="b540c381-23e7-40b2-8822-a131bcbdcaa7" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="OnConnectionStateChanged">
+			<body kind="om">
+				<![CDATA[if (here.SERVER.ConnectionState==2)
+{
+here.Connection_Button_Shadow.Connection_OFF.Visible=false;
+}
+else
+{
+here.Connection_Button_Shadow.Connection_OFF.Visible=true;
+}]]>
+			</body>
+		</do-on>
+		<init target="ParentSource" ref="here.in_SERVER"/>
+	</object>
+</type>
+

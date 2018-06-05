@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Popup_Send_TURevun" display-name="Popup_Send_TURevun" uuid="4dc79350-70a6-4794-903b-f45e60bf44a3" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<designed target="Width" value="300"/>
+	<designed target="Height" value="220"/>
+	<designed target="PenColor" value="4278190080"/>
+	<designed target="PenStyle" value="0"/>
+	<designed target="PenWidth" value="1"/>
+	<designed target="BrushColor" value="0xff336673"/>
+	<designed target="BrushStyle" value="1"/>
+	<designed target="WindowX" value="800"/>
+	<designed target="WindowY" value="400"/>
+	<designed target="WindowWidth" value="300"/>
+	<designed target="WindowHeight" value="220"/>
+	<designed target="WindowCaption" value="Ревун"/>
+	<designed target="WindowBorderStyle" value="2"/>
+	<designed target="ShowWindowCaption" value="true"/>
+	<designed target="ShowWindowMinimize" value="false"/>
+	<designed target="ShowWindowMaximize" value="false"/>
+	<designed target="ShowWindowClose" value="true"/>
+	<designed target="WindowSizeMode" value="0"/>
+	<designed target="WindowScalingMode" value="0"/>
+	<designed target="WindowCloseMode" value="0"/>
+	<object access-modifier="private" name="Control_1" display-name="Control_1" uuid="f075d7cb-fbf2-4c27-9132-6798816fc951" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba">
+		<designed target="X" value="39.957783641160958"/>
+		<designed target="Y" value="14"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="false"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="286"/>
+		<designed target="Height" value="191.99999999999997"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="67fc6ca5-116e-4494-9a53-7c0a662dd6ff" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="0"/>
+			<designed target="Y" value="0"/>
+		</object>
+		<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="0281665c-2d0f-49fb-8225-3fd16c4f1898" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="-33.957783641160923"/>
+			<designed target="Y" value="0"/>
+		</object>
+		<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="7c9aa54c-4665-4e05-aa21-98db41f7a290" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="-33.957783641160923"/>
+			<designed target="Y" value="191.99999999999997"/>
+		</object>
+		<object access-modifier="private" name="Point_4" display-name="Point_4" uuid="e9700f07-8585-4dc6-a3ce-12d9c2536147" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="252.04221635883906"/>
+			<designed target="Y" value="191.99999999999997"/>
+		</object>
+		<object access-modifier="private" name="Point_5" display-name="Point_5" uuid="652898d8-595d-48e8-8264-5351a42dcf7c" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="252.04221635883906"/>
+			<designed target="Y" value="0"/>
+		</object>
+		<object access-modifier="private" name="Point_6" display-name="Point_6" uuid="1dac0dee-5a27-43e6-9dad-e0b4d94b4159" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="110"/>
+			<designed target="Y" value="0"/>
+		</object>
+		<object access-modifier="private" name="Name" display-name="Name" uuid="a9274a21-5aa4-4aa9-b993-9e02468bb51a" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="7.6000000000000227"/>
+			<designed target="Y" value="-9.9999999999999432"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="116.39999999999999"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="Управление"/>
+			<designed target="Font" value="Arial,12,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="33"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Disp_Button_Shadow" display-name="Disp_Button_Shadow" uuid="53f9cc6b-1153-4f50-a3a6-ea5ea0a7ffb1" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="16.642857142857338"/>
+		<designed target="Y" value="90.75"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="270"/>
+		<designed target="Height" value="45"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xffb4b4b4"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Disp_Button" display-name="Disp_Button" uuid="a9082d84-9276-4da6-996b-645f7157e5d1" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="-4"/>
+			<designed target="Y" value="-4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="270"/>
+			<designed target="Height" value="45"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xff000000"/>
+			<designed target="PenStyle" value="0"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="4278190080"/>
+			<designed target="BrushStyle" value="0"/>
+			<object access-modifier="private" name="LinearGradient_1" display-name="LinearGradient_1" uuid="6cb55ed2-9efe-410c-b687-73d40220c6ee" base-type="LinearGradient" base-type-id="3fca3251-ff83-4d88-b94d-b3ac37a76ba0">
+				<designed target="Rotation" value="270"/>
+				<object access-modifier="private" name="GradientPoint_1" display-name="GradientPoint_1" uuid="3ea9161c-67e4-46e9-bbf2-67c0c9c98ace" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891">
+					<designed target="Position" value="0"/>
+					<designed target="Color" value="0xffcdcdcd"/>
+				</object>
+				<object access-modifier="private" name="GradientPoint_2" display-name="GradientPoint_2" uuid="4601b46d-398a-4103-ba1d-5ed65a89fb7f" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891">
+					<designed target="Position" value="1"/>
+					<designed target="Color" value="0xfff5f5f5"/>
+				</object>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[/*запрет повторного нажатия кнопок на время выполнения скрипта
+Disp_Button.Enabled=false;
+here.DSP_Button_Shadow.DSP_Button.Enabled=false;
+//двухбайтная команда ТУ: старший байт - код диспетчерского пункта (14-АРМ диспетчера), младший - код команды ТУ
+Command_Name.Value=256*1+1;
+GenSource.Value="<Subcondition Message='. Команда ТУ <<Отключить ревун>> подана с АРМ "+here.Network_1.ComputerName+" пользователем под учетной записью "+here.SecurityContext.CurrentUser+" ' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+//задержка после записи в тег перед закрытием окна
+Delay_Timer.Active = true;*/
+
+if (here.EnableTU_BoolToken.Value == true)
+{	
+	here.CommandCode = 1;
+	here.TU_Command = "Отключить";
+	Action_OpenPopup.Invoke();
+}
+else
+{
+	here.SendTU_Action_Denied.Invoke();
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[here.Disp_Button_Shadow.Disp_Button.LinearGradient_1.GradientPoint_1.Color=0xffadadad;
+here.Disp_Button_Shadow.Disp_Button.LinearGradient_1.GradientPoint_2.Color=0xffd5d5d5;
+here.Disp_Button_Shadow.Disp_Rectangle.Visible=true;]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="Disp_Rectangle" display-name="Disp_Rectangle" uuid="fe561de8-1df5-4014-bbff-9bdcc89bea44" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="-4"/>
+			<designed target="Y" value="-4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="false"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="270"/>
+			<designed target="Height" value="45"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="3"/>
+			<designed target="BrushColor" value="4278190080"/>
+			<designed target="BrushStyle" value="0"/>
+		</object>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[here.Disp_Button_Shadow.Disp_Button.LinearGradient_1.GradientPoint_1.Color=0xffcdcdcd;
+here.Disp_Button_Shadow.Disp_Button.LinearGradient_1.GradientPoint_2.Color=0xfff5f5f5;
+here.Disp_Button_Shadow.Disp_Rectangle.Visible=false;]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="Disp_Text" display-name="Disp_Text" uuid="02eb9daa-2b75-4982-8cb6-780dd61f1f66" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="-4"/>
+			<designed target="Y" value="-4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="270"/>
+			<designed target="Height" value="45"/>
+			<designed target="Text" value="Отключить"/>
+			<designed target="Font" value="Tahoma,16,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffaa0000"/>
+			<designed target="TextAlignment" value="132"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="DSP_Button_Shadow" display-name="DSP_Button_Shadow" uuid="a4c7146a-f15a-417e-9038-064a5fc11ddb" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="15.642857142857338"/>
+		<designed target="Y" value="30.75"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="270"/>
+		<designed target="Height" value="45"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xffb4b4b4"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="DSP_Button" display-name="DSP_Button" uuid="d6614491-193d-48f1-90aa-99efa3297caf" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="-4"/>
+			<designed target="Y" value="-4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="270"/>
+			<designed target="Height" value="45"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xff000000"/>
+			<designed target="PenStyle" value="0"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="4278190080"/>
+			<designed target="BrushStyle" value="0"/>
+			<object access-modifier="private" name="LinearGradient_1" display-name="LinearGradient_1" uuid="a380f1ef-ec2f-4566-a43f-877d74917c61" base-type="LinearGradient" base-type-id="3fca3251-ff83-4d88-b94d-b3ac37a76ba0">
+				<designed target="Rotation" value="270"/>
+				<object access-modifier="private" name="GradientPoint_1" display-name="GradientPoint_1" uuid="e5f83830-090c-47c6-839e-9607b46a7c92" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891">
+					<designed target="Position" value="0"/>
+					<designed target="Color" value="0xffcdcdcd"/>
+				</object>
+				<object access-modifier="private" name="GradientPoint_2" display-name="GradientPoint_2" uuid="cfc87d2e-d545-41d4-8cc3-1adafa2dcac9" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891">
+					<designed target="Position" value="1"/>
+					<designed target="Color" value="0xfff5f5f5"/>
+				</object>
+			</object>
+			<do-on access-modifier="private" name="" display-name="" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[/*запрет повторного нажатия кнопок на время выполнения скрипта
+here.Disp_Button_Shadow.Disp_Button.Enabled=false;
+DSP_Button.Enabled=false;
+//двухбайтная команда ТУ: старший байт - код диспетчерского пункта (1-АРМ дежурного по станции), младший - код команды ТУ
+here.Command_Name.Value=256*1+2;
+here.GenSource.Value="<Subcondition Message='. Команда ТУ <<Включить ревун>> подана с АРМ "+here.Network_1.ComputerName+" пользователем под учетной записью "+here.SecurityContext.CurrentUser+" ' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+//задержка после записи в тег перед закрытием окна
+Delay_Timer.Active = true;
+*/
+
+if (here.EnableTU_BoolToken.Value == true)
+{	
+	here.CommandCode = 2;
+	here.TU_Command = "Включить";
+	Action_OpenPopup.Invoke();
+}
+else
+{
+	here.SendTU_Action_Denied.Invoke();
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[here.DSP_Button_Shadow.DSP_Button.LinearGradient_1.GradientPoint_1.Color=0xffadadad;
+here.DSP_Button_Shadow.DSP_Button.LinearGradient_1.GradientPoint_2.Color=0xffd5d5d5;
+here.DSP_Button_Shadow.DSP_Rectangle.Visible=true;]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="DSP_Rectangle" display-name="DSP_Rectangle" uuid="b1d9b541-a9de-4cab-a478-221a10a17ca1" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="-4"/>
+			<designed target="Y" value="-4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="false"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="270"/>
+			<designed target="Height" value="45"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="3"/>
+			<designed target="BrushColor" value="4278190080"/>
+			<designed target="BrushStyle" value="0"/>
+		</object>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[here.DSP_Button_Shadow.DSP_Button.LinearGradient_1.GradientPoint_1.Color=0xffcdcdcd;
+here.DSP_Button_Shadow.DSP_Button.LinearGradient_1.GradientPoint_2.Color=0xfff5f5f5;
+here.DSP_Button_Shadow.DSP_Rectangle.Visible=false;]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="DSP_Text" display-name="DSP_Text" uuid="d9961bb7-2c12-4cc4-961d-4c23cf189208" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="-4"/>
+			<designed target="Y" value="-4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="270"/>
+			<designed target="Height" value="45"/>
+			<designed target="Text" value="Включить"/>
+			<designed target="Font" value="Tahoma,16,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff00aa00"/>
+			<designed target="TextAlignment" value="132"/>
+		</object>
+	</object>
+	<param access-modifier="private" name="in_SERVER" display-name="in_SERVER" uuid="4881e873-2870-4f57-80d7-a8a35a740085" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="Network_1" display-name="Network_1" uuid="8f976729-7fdb-4201-961e-5871c8cc4154" base-type="Network" base-type-id="aa841b9c-0610-4150-8495-3bfad7484a73"/>
+	<object access-modifier="private" name="GenSource" display-name="GenSource" uuid="f7c029fb-a1be-4410-92bf-880e58372992" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="here.SERVER"/>
+		<init target="Path" value="Metro.Moscow.KS.EMS.Gen Source"/>
+	</object>
+	<object access-modifier="private" name="SERVER" display-name="SERVER" uuid="2a9f1232-d47b-44ab-a57f-03ff22c94317" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="here.in_SERVER"/>
+	</object>
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="7dd329fc-dec3-4c12-a2a9-5da13b2728b0" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd"/>
+	<object access-modifier="private" name="Command_Name" display-name="Command_Name" uuid="1ecd4706-5ccb-41c3-8139-00157d9c1d22" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="here.Object"/>
+		<init target="Path" value="Cmd"/>
+	</object>
+	<param access-modifier="private" name="in_Object" display-name="in_Object" uuid="da1d6ad5-9f6c-48b8-9785-2f7d21d65b6f" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="Object" display-name="Object" uuid="0968200a-a649-454b-abeb-0d0a91442577" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="here.in_Object"/>
+	</object>
+	<object access-modifier="private" name="Delay_Timer" display-name="Delay_Timer" uuid="681339e9-eb7f-488d-b110-79067e5d1530" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a">
+		<designed target="Period" value="2000"/>
+		<designed target="Active" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="OnTimer">
+			<body kind="om">
+				<![CDATA[here.Disp_Button_Shadow.Disp_Button.Enabled=true;
+here.DSP_Button_Shadow.DSP_Button.Enabled=true;
+here.Delay_Timer.Active=false;
+Close();]]>
+			</body>
+		</do-on>
+	</object>
+	<designed target="AlwaysOnTop" value="false"/>
+	<designed target="WindowState" value="0"/>
+	<designed target="MonitorNumber" value="0"/>
+	<designed target="WindowPosition" value="0"/>
+	<object access-modifier="private" name="SendTU_Action_Denied" display-name="SendTU_Action_Denied" uuid="331bbbcb-e288-4a1b-8fea-94a09169c28a" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95">
+		<designed target="Enabled" value="true"/>
+		<designed target="InvokeTrigger" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="open-dialog" event="Invoked">
+			<object access-modifier="private" uuid="9a8fe5b5-7f44-4a27-a198-12511c696ac9" base-type="Exit_Denied" base-type-id="163ecc5b-1a1f-40ca-9b24-952a950c2981">
+				<init target="Error" value="Недостаточно прав для подачи команд телеуправления!"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="EnableTU_BoolToken" display-name="EnableTU_BoolToken" uuid="0681af50-e5de-4fe7-b1c9-7dc511828bb4" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59">
+		<init target="Right" value="EnableTU"/>
+		<init target="SecurityContext" ref="here.SecurityContext"/>
+		<init target="Application" value="Alpha.HMI"/>
+	</object>
+	<object access-modifier="private" name="Action_OpenPopup" display-name="Action_OpenPopup" uuid="dde608eb-7248-4e31-8975-377010fc6c20" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95">
+		<designed target="Enabled" value="true"/>
+		<designed target="InvokeTrigger" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="open-dialog" event="Invoked">
+			<object access-modifier="private" uuid="3ef6bef3-f361-4bbb-bbdd-6a3be9087580" base-type="Send_TU" base-type-id="cc78bdf0-fc92-45bb-a3e3-f5187affa497">
+				<init target="in_ControlRoom" ref="here.ControlRoom"/>
+				<init target="TU_Command" ref="here.TU_Command"/>
+				<init target="in_Object" ref="here.Object"/>
+				<init target="in_CommandCode" ref="here.CommandCode"/>
+				<init target="in_TU_Command" ref="here.TU_Command"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="CommandCode" display-name="CommandCode" uuid="f804c266-37d3-4be1-8a41-fbc10df2e8a3" base-type="uint32" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e"/>
+	<object access-modifier="private" name="TU_Command" display-name="TU_Command" uuid="2fcb061a-eadc-42fc-9ca2-8ed3b4199370" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d"/>
+	<object access-modifier="private" name="ButtonTest" display-name="ButtonTest" uuid="d299ec56-c8d0-4a88-a04a-9f27eb48e6e0" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="16.642857142857338"/>
+		<designed target="Y" value="148.75"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="270"/>
+		<designed target="Height" value="45"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xffb4b4b4"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Disp_Button" display-name="Disp_Button" uuid="b08f478d-85de-4513-a718-c57ee25444ca" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="-4"/>
+			<designed target="Y" value="-4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="270"/>
+			<designed target="Height" value="45"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xff000000"/>
+			<designed target="PenStyle" value="0"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="4278190080"/>
+			<designed target="BrushStyle" value="0"/>
+			<object access-modifier="private" name="LinearGradient_1" display-name="LinearGradient_1" uuid="f78d00c0-846b-49b6-9aa9-441ac47bc6c4" base-type="LinearGradient" base-type-id="3fca3251-ff83-4d88-b94d-b3ac37a76ba0">
+				<designed target="Rotation" value="270"/>
+				<object access-modifier="private" name="GradientPoint_1" display-name="GradientPoint_1" uuid="20b0621a-c22d-4d1c-9058-4a6335396627" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891">
+					<designed target="Position" value="0"/>
+					<designed target="Color" value="0xffcdcdcd"/>
+				</object>
+				<object access-modifier="private" name="GradientPoint_2" display-name="GradientPoint_2" uuid="2c493fd7-10cd-4704-a9d3-662d00bb38e6" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891">
+					<designed target="Position" value="1"/>
+					<designed target="Color" value="0xfff5f5f5"/>
+				</object>
+			</object>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[/*запрет повторного нажатия кнопок на время выполнения скрипта
+Disp_Button.Enabled=false;
+here.DSP_Button_Shadow.DSP_Button.Enabled=false;
+//двухбайтная команда ТУ: старший байт - код диспетчерского пункта (14-АРМ диспетчера), младший - код команды ТУ
+Command_Name.Value=256*1+1;
+GenSource.Value="<Subcondition Message='. Команда ТУ <<Отключить ревун>> подана с АРМ "+here.Network_1.ComputerName+" пользователем под учетной записью "+here.SecurityContext.CurrentUser+" ' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+//задержка после записи в тег перед закрытием окна
+Delay_Timer.Active = true;*/
+
+if (here.EnableTU_BoolToken.Value == true)
+{	
+	here.CommandCode = 0;
+	here.TU_Command = "Тестирование";
+	Action_OpenPopup.Invoke();
+}
+else
+{
+	here.SendTU_Action_Denied.Invoke();
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[
+me.Disp_Button.LinearGradient_1.GradientPoint_1.Color=0xffadadad;
+me.Disp_Button.LinearGradient_1.GradientPoint_2.Color=0xffd5d5d5;
+me.Disp_Rectangle.Visible=true;]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="Disp_Rectangle" display-name="Disp_Rectangle" uuid="f90c6320-f812-48d0-87d1-470d91ee2ab4" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="-4"/>
+			<designed target="Y" value="-4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="false"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="270"/>
+			<designed target="Height" value="45"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="3"/>
+			<designed target="BrushColor" value="4278190080"/>
+			<designed target="BrushStyle" value="0"/>
+		</object>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[me.Disp_Button.LinearGradient_1.GradientPoint_1.Color=0xffcdcdcd;
+me.Disp_Button.LinearGradient_1.GradientPoint_2.Color=0xfff5f5f5;
+me.Disp_Rectangle.Visible=false;]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="Disp_Text" display-name="Disp_Text" uuid="139c8bb0-41b3-4030-8014-288e1a5ae4b0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="-4"/>
+			<designed target="Y" value="-4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="270"/>
+			<designed target="Height" value="45"/>
+			<designed target="Text" value="Тестирование"/>
+			<designed target="Font" value="Tahoma,16,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff0000ff"/>
+			<designed target="TextAlignment" value="132"/>
+		</object>
+	</object>
+</type>
+

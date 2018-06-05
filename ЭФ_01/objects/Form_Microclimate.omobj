@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Form_Microclimate" display-name="Form_Microclimate" uuid="7b2bd1f5-98cd-4ef6-b832-3e8218e657a5" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<designed target="Width" value="1920"/>
+	<designed target="Height" value="986"/>
+	<designed target="PenColor" value="4278190080"/>
+	<designed target="PenStyle" value="0"/>
+	<designed target="PenWidth" value="1"/>
+	<designed target="BrushColor" value="0xff336673"/>
+	<designed target="BrushStyle" value="1"/>
+	<designed target="WindowX" value="0"/>
+	<designed target="WindowY" value="0"/>
+	<designed target="WindowWidth" value="1920"/>
+	<designed target="WindowHeight" value="986"/>
+	<designed target="WindowCaption" value=""/>
+	<designed target="WindowBorderStyle" value="2"/>
+	<designed target="ShowWindowCaption" value="false"/>
+	<designed target="ShowWindowMinimize" value="false"/>
+	<designed target="ShowWindowMaximize" value="false"/>
+	<designed target="ShowWindowClose" value="false"/>
+	<designed target="WindowSizeMode" value="0"/>
+	<designed target="WindowScalingMode" value="0"/>
+	<designed target="WindowCloseMode" value="0"/>
+	<param access-modifier="private" name="in_Station" display-name="in_Station" uuid="55851147-c294-49e6-ae7c-864084ead253" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<param access-modifier="private" name="in_ControlRoom" display-name="in_ControlRoom" uuid="65473266-8ed4-4532-8741-f7b6654443cf" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="Top_Rectangle" display-name="Top_Rectangle" uuid="d81105b9-f9db-44cf-931e-fb9bcacb15f6" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip"/>
+		<designed target="Width" value="1920"/>
+		<designed target="Height" value="36"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="FullName" display-name="FullName" uuid="985a88c0-68dd-49c4-9732-78c66324f7cd" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="400"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="1108"/>
+			<designed target="Height" value="36"/>
+			<designed target="Text" value="СТАНЦИЯ НОВОПЕРЕДЕЛКИНО. МИКРОКЛИМАТ"/>
+			<designed target="Font" value="Arial,20,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="BKP_1" display-name="BKP_1" uuid="b2d92014-6465-43d3-997c-f3d5a81b6f7d" base-type="BKP" base-type-id="c97fbb9a-5c20-4dad-b50d-7d2c55dd19df">
+		<designed target="X" value="223.00000000000057"/>
+		<designed target="Y" value="636"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="e689c838-809f-4c3e-ae85-11a01ecc5065" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="true"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="BKP1"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="BKP_2" display-name="BKP_2" uuid="01b9dd85-98d5-4bb2-b8e6-dbdb964fedb4" base-type="BKP" base-type-id="c97fbb9a-5c20-4dad-b50d-7d2c55dd19df">
+		<designed target="X" value="692.00000000000023"/>
+		<designed target="Y" value="636"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="1735e690-d302-4901-9df9-af32c824c9e5" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="BKP2"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="BKP_3" display-name="BKP_3" uuid="a843ae92-a5e3-4a81-a2c1-1b61ed927899" base-type="BKP" base-type-id="c97fbb9a-5c20-4dad-b50d-7d2c55dd19df">
+		<designed target="X" value="1162.0000000000002"/>
+		<designed target="Y" value="636"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="cb082340-cc0e-4ffd-b9a8-bc44ee1e8f25" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="BKP3"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="BKP_4" display-name="BKP_4" uuid="fb23d3ff-20d0-48f0-895a-5e2108bc4786" base-type="BKP" base-type-id="c97fbb9a-5c20-4dad-b50d-7d2c55dd19df">
+		<designed target="X" value="1632"/>
+		<designed target="Y" value="635"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="96b98d5f-0b75-43ae-9b88-59ad42f20dd4" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="BKP4"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="BKP_5" display-name="BKP_5" uuid="c82170ed-e8a3-4223-a75a-0e4b8985c106" base-type="BKP" base-type-id="c97fbb9a-5c20-4dad-b50d-7d2c55dd19df">
+		<designed target="X" value="220.99999999999994"/>
+		<designed target="Y" value="855"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="4443ebe0-dffc-460c-abc7-f302802e96f2" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="BKP5"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="BKP_6" display-name="BKP_6" uuid="bbd2d14d-8ac1-4cc9-8ae6-e070741317f7" base-type="BKP" base-type-id="c97fbb9a-5c20-4dad-b50d-7d2c55dd19df">
+		<designed target="X" value="691"/>
+		<designed target="Y" value="855"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="f3552130-a263-4619-b5a5-49f29d976a10" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="BKP6"/>
+			</object>
+		</init>
+	</object>
+	<designed target="AlwaysOnTop" value="false"/>
+	<designed target="WindowState" value="0"/>
+	<designed target="MonitorNumber" value="0"/>
+	<designed target="WindowPosition" value="0"/>
+	<object access-modifier="private" name="Background_16" display-name="Background_16" uuid="e409e7c7-9438-48a9-bfbf-80830c10dcab" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="365"/>
+		<designed target="Y" value="210"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="230"/>
+		<designed target="Height" value="162"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff5c858f"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="ovuName" display-name="ovuName" uuid="c3e307e8-731f-42ea-bb36-eebd685d83a0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="62.399999999999991"/>
+			<designed target="Y" value="5.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="87.600000000000009"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="МВУ-???"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="130"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="6N1" display-name="6N1" uuid="d17edbfc-b490-4594-bd8e-2bfda503d3f6" base-type="Object_Flowmeter" base-type-id="8d110221-a03f-465e-8788-24453a4d7988">
+		<designed target="X" value="375"/>
+		<designed target="Y" value="240"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="6c8fa0c7-4669-4ab6-a250-603555898d8a" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="1N1"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="Background_18" display-name="Background_18" uuid="17155fc2-8967-47ad-ad57-04d50cfee0bc" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="605"/>
+		<designed target="Y" value="210"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="230"/>
+		<designed target="Height" value="162"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff5c858f"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="ovuName" display-name="ovuName" uuid="b0847016-3b50-4a1c-a4ed-255a8feaf066" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="62.399999999999991"/>
+			<designed target="Y" value="5.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="87.600000000000009"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="МВУ-???"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="130"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="6N1_1" display-name="6N1_1" uuid="5ba6b39d-e59b-4c6a-8aa2-b6d8d576ac6f" base-type="Object_Flowmeter" base-type-id="8d110221-a03f-465e-8788-24453a4d7988">
+		<designed target="X" value="615"/>
+		<designed target="Y" value="240"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="6c8fa0c7-4669-4ab6-a250-603555898d8a" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="1N2"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="Background_19" display-name="Background_19" uuid="a4954919-4c09-4c01-b344-1ce23d38c88b" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="845"/>
+		<designed target="Y" value="210"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="230"/>
+		<designed target="Height" value="162"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff5c858f"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="ovuName" display-name="ovuName" uuid="b96e7858-7e81-4529-86ef-034f863d6650" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="62.399999999999991"/>
+			<designed target="Y" value="5.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="87.600000000000009"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="МВУ-???"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="130"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="6N1_2" display-name="6N1_2" uuid="2ffb5367-554a-427e-b829-a74e97071422" base-type="Object_Flowmeter" base-type-id="8d110221-a03f-465e-8788-24453a4d7988">
+		<designed target="X" value="855"/>
+		<designed target="Y" value="240"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="6c8fa0c7-4669-4ab6-a250-603555898d8a" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="1N3"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="Background_20" display-name="Background_20" uuid="a7bdf615-9416-438f-b3d2-6814bd0790fd" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="1085"/>
+		<designed target="Y" value="210"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="230"/>
+		<designed target="Height" value="162"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff5c858f"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="ovuName" display-name="ovuName" uuid="69475cee-47e3-41c5-964b-30efbf1a1d54" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="62.399999999999991"/>
+			<designed target="Y" value="5.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="87.600000000000009"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="МВУ-???"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="130"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="6N1_3" display-name="6N1_3" uuid="eb4fb6d3-7a5c-4836-90f2-7292336ed60b" base-type="Object_Flowmeter" base-type-id="8d110221-a03f-465e-8788-24453a4d7988">
+		<designed target="X" value="1095"/>
+		<designed target="Y" value="240"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="6c8fa0c7-4669-4ab6-a250-603555898d8a" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="1N4"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="Background_21" display-name="Background_21" uuid="bfddfe00-8b01-49dc-9739-b93f021627dd" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="1325"/>
+		<designed target="Y" value="210"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="230"/>
+		<designed target="Height" value="162"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff5c858f"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff3e5c64"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="ovuName" display-name="ovuName" uuid="aca156f1-b7e0-44c5-8f29-83c3feddb2a4" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="62.399999999999991"/>
+			<designed target="Y" value="5.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="87.600000000000009"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="МВУ-???"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="130"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="6N1_4" display-name="6N1_4" uuid="e5971dd2-f07b-4b28-b90f-4d10c7d76e57" base-type="Object_Flowmeter" base-type-id="8d110221-a03f-465e-8788-24453a4d7988">
+		<designed target="X" value="1335"/>
+		<designed target="Y" value="240"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="6c8fa0c7-4669-4ab6-a250-603555898d8a" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="1N5"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="BKP_7" display-name="BKP_7" uuid="d96930fb-b64c-4f7d-b44f-8baa254b9da0" base-type="BKP" base-type-id="c97fbb9a-5c20-4dad-b50d-7d2c55dd19df">
+		<designed target="X" value="1161.0000000000005"/>
+		<designed target="Y" value="855"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="4443ebe0-dffc-460c-abc7-f302802e96f2" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="BKP7"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="BKP_8" display-name="BKP_8" uuid="9cd35b49-78f1-49c8-957d-6ab40ed5cf7b" base-type="BKP" base-type-id="c97fbb9a-5c20-4dad-b50d-7d2c55dd19df">
+		<designed target="X" value="1631.0000000000005"/>
+		<designed target="Y" value="855"/>
+		<designed target="Rotation" value="0"/>
+		<init target="in_Object">
+			<object access-modifier="private" uuid="f3552130-a263-4619-b5a5-49f29d976a10" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Station"/>
+				<init target="Path" value="BKP8"/>
+			</object>
+		</init>
+	</object>
+</type>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Symbol_VU1" display-name="Symbol_VU1" uuid="1af8d4c2-cb24-4f56-84af-437e32754c5d" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<object access-modifier="private" name="Alarm_Circle_Fault_2" display-name="Alarm_Circle_Fault_2" uuid="a4082649-3f51-4f03-93a6-0b4d9bc4bd35" base-type="Alarm_Circle_Fault" base-type-id="0b9bcad8-251e-4292-a51f-a0235639ea9a">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<init target="In_Object" ref="here.In_Object"/>
+	</object>
+	<object access-modifier="private" name="Alarm_Circle_LHH_2" display-name="Alarm_Circle_LHH_2" uuid="ca5da8a0-1fa8-4b6b-b6b0-84aab5f658d7" base-type="Alarm_Circle_LHH" base-type-id="bc90286f-3b9c-4221-9d3b-31d17c1e16c5">
+		<designed target="X" value="90"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<init target="In_Object" ref="here.In_Object"/>
+	</object>
+	<object access-modifier="private" name="Object_Pump_2" display-name="Object_Pump_2" uuid="dc7f3bf1-5181-48c7-a87b-6bf7e7592b6f" base-type="Object_Pump" base-type-id="746d53ce-be38-422d-9038-d9095423a915">
+		<designed target="X" value="160"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<init target="In_Object">
+			<object access-modifier="private" uuid="e4c4fff6-0967-4669-84d4-356136444ac3" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.In_Object"/>
+				<init target="Path" value="Pump1"/>
+			</object>
+		</init>
+	</object>
+	<param access-modifier="private" name="In_Object" display-name="In_Object" uuid="ced36af3-807f-4b3e-9f61-4e88693445b1" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+</type>
+

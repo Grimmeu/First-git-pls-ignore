@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Object_Alarm_Circle_Fault" display-name="Object_Alarm_Circle_Fault" uuid="0b9bcad8-251e-4292-a51f-a0235639ea9a" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<object access-modifier="private" name="Background" display-name="Background" uuid="00c90925-193b-4187-a179-f4bc1f384dec" base-type="Ellipse" base-type-id="7f9e9b77-5d97-45c4-89c1-0f67adb636cd">
+		<designed target="X" value="27"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="36"/>
+		<designed target="Height" value="36"/>
+		<designed target="PenColor" value="0xff5c858f"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff336673"/>
+		<designed target="BrushStyle" value="1"/>
+		<do-trace access-modifier="private" target="BrushColor">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Fault == 1]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff00007f]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Fault == 0]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff336673]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<object access-modifier="private" name="Alarm" display-name="Alarm" uuid="e52d5a40-a65d-48e2-8c30-0ce5b4eefa69" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba">
+			<designed target="X" value="18"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="0.80000000000000004"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value="Объект управления не контролируется"/>
+			<designed target="Width" value="32"/>
+			<designed target="Height" value="30"/>
+			<designed target="PenColor" value="0xffb10000"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="3"/>
+			<designed target="BrushColor" value="0xffffffff"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="478b097b-82b3-46b6-9250-4ee2af8e469f" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+			</object>
+			<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="4b14c62b-7ee2-493e-8d72-f9ea39ec9457" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="-16"/>
+				<designed target="Y" value="30"/>
+			</object>
+			<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="221a0e42-641d-443a-b14b-c96249cf1759" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="16"/>
+				<designed target="Y" value="30"/>
+			</object>
+			<object access-modifier="private" name="Point_4" display-name="Point_4" uuid="67ad7064-50d7-4fbc-b872-4348e1bb0987" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+			</object>
+			<object access-modifier="private" name="Alarm_text" display-name="Alarm_text" uuid="24a76b40-a3b6-4ce3-9e17-7a53a2722fc5" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="-4.6136363636364308"/>
+				<designed target="Y" value="2.5324675324675354"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip"/>
+				<designed target="Width" value="8.7272727272728616"/>
+				<designed target="Height" value="26.909090909090914"/>
+				<designed target="Text" value="!"/>
+				<designed target="Font" value="Times New Roman,19,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="33"/>
+			</object>
+			<init target="Visible" value="false"/>
+			<do-trace access-modifier="private" target="Visible">
+				<conditional-expr>
+					<condition>
+						<![CDATA[(here.sysinflt.Value == 1 || 
+here.sysinflt.Quality < 192) && (here.sysinflt.AdviseState == 2)]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[sysinflt == 0]]>
+					</condition>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[Select_Rectangle.Visible = true;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[Select_Rectangle.Visible = false;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="216c6c05-7912-4d9b-86d4-33fcbdebb6a2" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="27"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="false"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="36"/>
+		<designed target="Height" value="36"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="3"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+			<body kind="javascript">
+				<![CDATA[Action_Context.OpenAtX = ScreenX(30, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-25);
+
+Action_Context.Invoke();]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Alarm_text" display-name="Alarm_text" uuid="abd832d1-2fb7-4120-9d9a-617052223820" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="47"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="92"/>
+		<designed target="Height" value="20"/>
+		<designed target="Text" value="Неисправность"/>
+		<designed target="Font" value="Arial,10,-1,5,50,0,0,0,0,0"/>
+		<designed target="FontColor" value="0xff000000"/>
+		<designed target="TextAlignment" value="132"/>
+		<init target="FontColor" value="0xffffffff"/>
+	</object>
+	<object access-modifier="private" name="Fault" display-name="Fault" uuid="266d1b76-0682-408d-921d-96e0df9f6a19" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Fault"/>
+		<init target="Source" ref="here.In_Object"/>
+	</object>
+	<object access-modifier="private" name="sysinflt" display-name="sysinflt" uuid="6c0e07a4-11ca-47de-8fd5-e52ab83eaf0e" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Sysinflt"/>
+		<init target="Source" ref="here.In_Object"/>
+	</object>
+	<object access-modifier="private" name="Alias" display-name="Alias" uuid="2c7959bd-896d-4ea6-8686-c263c1ea52f6" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="Action_Context" display-name="Action_Context" uuid="7eb22110-5014-4299-9fb1-6f8387e0bf1b" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95">
+		<designed target="Enabled" value="true"/>
+		<designed target="InvokeTrigger" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="open-new" event="Invoked">
+			<object access-modifier="private" uuid="a54eb53e-1088-441c-b2fd-b8cadce3ec4d" base-type="Alarms" base-type-id="345ca3a2-de06-4691-971a-d1d738420780">
+				<init target="WindowX" ref="Action_Context.OpenAtX"/>
+				<init target="WindowY" ref="Action_Context.OpenAtY"/>
+				<init target="Alias" ref="here.Alias"/>
+			</object>
+		</do-on>
+		<object access-modifier="private" name="OpenAtX" display-name="OpenAtX" uuid="7bc6e71a-26eb-4776-8924-acdb9bff09d8" base-type="int32" base-type-id="74222947-f188-4195-8e0e-e33bd9827255"/>
+		<object access-modifier="private" name="OpenAtY" display-name="OpenAtY" uuid="b0315970-64d3-44ba-a0fa-a3b0692e2ae4" base-type="int32" base-type-id="74222947-f188-4195-8e0e-e33bd9827255"/>
+	</object>
+	<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+		<body kind="om">
+			<![CDATA[Select_Rectangle.Visible = true;]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+		<body kind="om">
+			<![CDATA[Select_Rectangle.Visible = false;]]>
+		</body>
+	</do-on>
+	<param access-modifier="private" name="In_Object" display-name="In_Object" uuid="c10ac25f-1d0a-4b51-98ce-146a21360642" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="Object" display-name="Object" uuid="258723cc-aed5-4015-af6b-f146c24a5077" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="false"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="here.In_Object"/>
+	</object>
+</type>
+

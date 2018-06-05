@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Object_Diag_Module" display-name="Object_Diag_Module" uuid="55491e59-4561-4b44-9815-dee4d7b5ccb9" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="180de954-83de-4daf-9eff-faaa7c34f59d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="-159.66666666666666"/>
+		<designed target="Y" value="-110.66666666666667"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip"/>
+		<designed target="Width" value="410"/>
+		<designed target="Height" value="505"/>
+		<designed target="RoundingRadius" value="10"/>
+		<designed target="PenColor" value="0xffffffff"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="2"/>
+		<designed target="BrushColor" value="0xffd4d4d4"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="d66b6322-204d-438d-a55a-f7af7a44a5ee" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="4"/>
+			<designed target="Y" value="13"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="402"/>
+			<designed target="Height" value="38"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="2"/>
+			<designed target="BrushColor" value="0xffd4d4d4"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="0db36329-fbaa-4fff-b2e8-32f8b0657e4d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip"/>
+				<designed target="Width" value="400"/>
+				<designed target="Height" value="36"/>
+				<designed target="Text" value="Состояние сервера"/>
+				<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[History_Module == 1 &&
+IEC_Master == 1 &&
+Logic_Module == 1 &&
+
+OPC_AE_Server == 1 &&
+OPC_DA_Server == 1 &&
+Snap_Shot == 1 &&
+SNMP_Manager == 1 &&
+TCP_Server == 1 &&
+Write_VQT == 1 &&
+Reserv  == 1]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff00ffff]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[History_Module == 0 ||
+IEC_Master == 0 ||
+Logic_Module == 0 ||
+
+OPC_AE_Server == 0 ||
+OPC_DA_Server == 0 ||
+Snap_Shot == 0 ||
+SNMP_Manager == 0 ||
+TCP_Server == 0 ||
+Write_VQT == 0 ||
+Reserv  == 0 ]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[History_Module.Quality < 192 ||
+IEC_Master.Quality < 192 ||
+Logic_Module.Quality < 192 ||
+
+OPC_AE_Server.Quality < 192 ||
+OPC_DA_Server.Quality < 192 ||
+Snap_Shot.Quality < 192 ||
+SNMP_Manager.Quality < 192 ||
+TCP_Server.Quality < 192 ||
+Write_VQT.Quality < 192 ||
+Reserv.Quality < 192 ]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffd4d4d4]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Rectangle_2" display-name="Rectangle_2" uuid="4ff6bc94-ce7a-4978-8ed8-e31a57cdcc51" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="4"/>
+			<designed target="Y" value="60"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="402"/>
+			<designed target="Height" value="38"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd4d4d4"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="2a5082fa-23cf-4f7c-a951-69e2cd313e87" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="400"/>
+				<designed target="Height" value="36"/>
+				<designed target="Text" value="History Module"/>
+				<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[History_Module == 1 && History_Module.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff87ff8f]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[History_Module == 0 && History_Module.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[ History_Module.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffd4d4d4]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Rectangle_3" display-name="Rectangle_3" uuid="4595e549-d067-46f0-b90a-eee7cd5f42d9" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="4"/>
+			<designed target="Y" value="100"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="402"/>
+			<designed target="Height" value="38"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd4d4d4"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="0940e72b-1f49-440d-875f-bf3be79a3447" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="400"/>
+				<designed target="Height" value="36"/>
+				<designed target="Text" value="IEC Master"/>
+				<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[IEC_Master == 1 && IEC_Master.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff87ff8f]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[IEC_Master == 0 && IEC_Master.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[IEC_Master < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffd4d4d4]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Rectangle_4" display-name="Rectangle_4" uuid="21b5470c-3c09-4ef1-b224-2af7b44be227" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="4"/>
+			<designed target="Y" value="140"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="402"/>
+			<designed target="Height" value="38"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd4d4d4"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="dc100624-be88-40bf-98fe-cc7df343d7b2" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip"/>
+				<designed target="Width" value="400"/>
+				<designed target="Height" value="36"/>
+				<designed target="Text" value="Logics Module"/>
+				<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Logic_Module == 1 && Logic_Module.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff87ff8f]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Logic_Module == 0 && Logic_Module.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[ Logic_Module.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffd4d4d4]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Rectangle_5" display-name="Rectangle_5" uuid="f1d43fbb-d204-45c2-aa52-f660ee517b95" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="4"/>
+			<designed target="Y" value="180"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="402"/>
+			<designed target="Height" value="38"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd4d4d4"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="ec63b9dc-e34a-4e51-af57-b73858e8c9f2" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="400"/>
+				<designed target="Height" value="36"/>
+				<designed target="Text" value="NetDiag"/>
+				<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[NetDiag == 1 && NetDiag.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff87ff8f]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[NetDiag == 0 && NetDiag.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[ NetDiag.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffd4d4d4]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Rectangle_6" display-name="Rectangle_6" uuid="3fb722c6-44ea-4b06-a2c5-cf293e292ddc" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="4"/>
+			<designed target="Y" value="220"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="402"/>
+			<designed target="Height" value="38"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd4d4d4"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="6467766b-a88e-421a-8f5b-8f306658a28c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip"/>
+				<designed target="Width" value="400"/>
+				<designed target="Height" value="36"/>
+				<designed target="Text" value="OPC AE Srerver"/>
+				<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[OPC_AE_Server == 1 && OPC_AE_Server.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff87ff8f]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[OPC_AE_Server == 0 && OPC_AE_Server.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[ OPC_AE_Server.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffd4d4d4]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Rectangle_7" display-name="Rectangle_7" uuid="4c427489-a2d7-4ca2-90c5-bffb021ff6a6" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="4"/>
+			<designed target="Y" value="260"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="402"/>
+			<designed target="Height" value="38"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd4d4d4"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_3" display-name="Text_3" uuid="c1bebdc1-002e-4f24-bc1b-417cb0604b70" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip"/>
+				<designed target="Width" value="400"/>
+				<designed target="Height" value="36"/>
+				<designed target="Text" value="OPC DA Server"/>
+				<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[OPC_DA_Server == 1 && OPC_DA_Server.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff87ff8f]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[OPC_DA_Server == 0 && OPC_DA_Server.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[ OPC_DA_Server.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffd4d4d4]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Rectangle_8" display-name="Rectangle_8" uuid="452db833-9626-4931-8d51-e24d6f567f56" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="4"/>
+			<designed target="Y" value="300"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="402"/>
+			<designed target="Height" value="38"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd4d4d4"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_3" display-name="Text_3" uuid="37414a66-df1e-461e-a68b-ad523c57b35b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip"/>
+				<designed target="Width" value="400"/>
+				<designed target="Height" value="36"/>
+				<designed target="Text" value="SnapShot Module"/>
+				<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Snap_Shot == 1 && Snap_Shot.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff87ff8f]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Snap_Shot == 0 && Snap_Shot.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Snap_Shot.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffd4d4d4]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Rectangle_9" display-name="Rectangle_9" uuid="6cc724fc-10c0-43ad-95a1-26fe0f665b0b" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="4"/>
+			<designed target="Y" value="340"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="402"/>
+			<designed target="Height" value="38"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd4d4d4"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_3" display-name="Text_3" uuid="ea31e64c-d4a1-47a7-b3e0-685edee1f033" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip"/>
+				<designed target="Width" value="400"/>
+				<designed target="Height" value="36"/>
+				<designed target="Text" value="SNMP Manager"/>
+				<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[SNMP_Manager == 1 && SNMP_Manager.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff87ff8f]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[SNMP_Manager == 0 && SNMP_Manager.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[ SNMP_Manager.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffd4d4d4]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Rectangle_10" display-name="Rectangle_10" uuid="96c958b4-5595-4d71-b183-043b79f43c93" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="4"/>
+			<designed target="Y" value="380"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="402"/>
+			<designed target="Height" value="38"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd4d4d4"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_4" display-name="Text_4" uuid="d57ccf18-c5e6-4454-b235-16d1585d26af" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip"/>
+				<designed target="Width" value="400"/>
+				<designed target="Height" value="36"/>
+				<designed target="Text" value="TCP Server Module"/>
+				<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[TCP_Server == 1 && TCP_Server.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff87ff8f]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[TCP_Server == 0 && TCP_Server.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[ TCP_Server.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffd4d4d4]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Rectangle_11" display-name="Rectangle_11" uuid="a363aba8-8ee0-4283-9653-4f1d86e42bfb" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="4"/>
+			<designed target="Y" value="420"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="402"/>
+			<designed target="Height" value="38"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd4d4d4"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_4" display-name="Text_4" uuid="9dccb55f-e1f0-4623-b5aa-3d1076eea039" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip"/>
+				<designed target="Width" value="400"/>
+				<designed target="Height" value="36"/>
+				<designed target="Text" value="Write VQT"/>
+				<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Write_VQT == 1 && Write_VQT.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff87ff8f]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Write_VQT == 0 && Write_VQT.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Write_VQT.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffd4d4d4]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Rectangle_12" display-name="Rectangle_12" uuid="531d73f6-32ac-4d06-a0e5-4c6828c713b7" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="4"/>
+			<designed target="Y" value="460"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="402"/>
+			<designed target="Height" value="38"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd4d4d4"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_4" display-name="Text_4" uuid="6d2d073c-8d93-43a8-a777-ce2d8cb44b85" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip"/>
+				<designed target="Width" value="400"/>
+				<designed target="Height" value="36"/>
+				<designed target="Text" value="Модуль резервирования"/>
+				<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Reserv == 1 && Reserv.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff87ff8f]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Reserv == 0 && Reserv.Quality >= 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[ Reserv.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffd4d4d4]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="Server" display-name="Server" uuid="86279272-6837-4687-bb33-dbe03b5218c8" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="in_Server"/>
+	</object>
+	<object access-modifier="private" name="History_Module" display-name="History_Module" uuid="c474d5bf-5422-4cbf-a272-a73d58f127b1" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.History Module1.Active"/>
+		<init target="Source" ref="Server"/>
+	</object>
+	<object access-modifier="private" name="IEC_Master" display-name="IEC_Master" uuid="c78e1fca-d0ad-45c2-9c7d-decadc36d824" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.IEC Master.Active"/>
+		<init target="Source" ref="Server"/>
+	</object>
+	<object access-modifier="private" name="Logic_Module" display-name="Logic_Module" uuid="9b872b73-12c0-4e9a-a0b8-84bbdf17bb90" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.Logics Module.Active"/>
+		<init target="Source" ref="here.Server"/>
+	</object>
+	<object access-modifier="private" name="NetDiag" display-name="NetDiag" uuid="517875b7-3394-4ea8-b45d-58aef1b3ab29" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.NetDiag.Active"/>
+		<init target="Source" ref="here.Server"/>
+	</object>
+	<object access-modifier="private" name="OPC_AE_Server" display-name="OPC_AE_Server" uuid="79c61902-0c56-42cf-8ffd-b5c021d7c716" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.OPC AE Server.Active"/>
+		<init target="Source" ref="here.Server"/>
+	</object>
+	<object access-modifier="private" name="OPC_DA_Server" display-name="OPC_DA_Server" uuid="ecd1e2f5-20e8-4d4e-87a7-d02568f36b5e" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.OPC DA Server.Active"/>
+		<init target="Source" ref="here.Server"/>
+	</object>
+	<object access-modifier="private" name="Snap_Shot" display-name="Snap_Shot" uuid="92b7abb3-9db5-4064-9ff7-908f9905bdab" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.SnapShot Module.Active"/>
+		<init target="Source" ref="here.Server"/>
+	</object>
+	<object access-modifier="private" name="SNMP_Manager" display-name="SNMP_Manager" uuid="02b8de8b-4eb9-4b8e-ad63-2715c501964a" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.SNMP Manager.Active"/>
+		<init target="Source" ref="here.Server"/>
+	</object>
+	<object access-modifier="private" name="TCP_Server" display-name="TCP_Server" uuid="3e8a784f-a634-41d9-9036-5ba702c22484" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.TCP Server Module.Active"/>
+		<init target="Source" ref="here.Server"/>
+	</object>
+	<object access-modifier="private" name="Write_VQT" display-name="Write_VQT" uuid="ea9751ed-25aa-43ec-be5d-c0aebc7d9887" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.Write VQT.Active"/>
+		<init target="Source" ref="here.Server"/>
+	</object>
+	<object access-modifier="private" name="Reserv" display-name="Reserv" uuid="ab3bc6dd-2ffb-49bf-8e6b-b1deaa9c7801" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Service.Modules.Модуль резервирования.Active"/>
+		<init target="Source" ref="here.Server"/>
+	</object>
+	<param access-modifier="private" name="in_Server" display-name="in_Server" uuid="b04d0674-c2c6-4af1-8786-698de9240d71" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+</type>
+

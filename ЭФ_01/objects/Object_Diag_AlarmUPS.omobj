@@ -1,0 +1,168 @@
+<type access-modifier="private" name="Object_Diag_AlarmUPS" display-name="Object_Diag_AlarmUPS" uuid="4ef69c0f-1927-4edb-bb8b-5c6af279e377" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value="Состояние ИБП:
+красный фон - Авария ИБП
+желтый фон - Переход на питание от ИБП
+серый фон - Норма ИБП"/>
+	<object access-modifier="private" name="Rectangle" display-name="Rectangle" uuid="330f37ba-5e2d-46cc-ad91-27bae1b397e5" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="35"/>
+		<designed target="Height" value="35"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff919191"/>
+		<designed target="BrushStyle" value="1"/>
+		<do-trace access-modifier="private" target="BrushColor">
+			<conditional-expr>
+				<condition>
+					<![CDATA[(here.AlarmUPS.Value!=1 && here.RezPit.Value!=1) || (here.AlarmUPS.Quality<192 && here.RezPit.Quality<192)]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff919191]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[here.AlarmUPS.Value==1 && here.AlarmUPS.Quality>=192]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[here.RezPit.Value==1 && here.RezPit.Quality>=192 && here.AlarmUPS.Value!=1]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffffff00]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="ec8bbde6-7e61-4f0d-a8f4-a0501fdb9a05" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="3.5"/>
+			<designed target="Y" value="11"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="28"/>
+			<designed target="Height" value="18"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="2"/>
+			<designed target="BrushColor" value="4278190080"/>
+			<designed target="BrushStyle" value="0"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="c07d0f39-5bc5-4983-9690-3e08601c9d15" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="3"/>
+				<designed target="Y" value="-4"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="6"/>
+				<designed target="Height" value="4"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="2"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+			</object>
+			<object access-modifier="private" name="Rectangle_2" display-name="Rectangle_2" uuid="cfd09934-f7a9-4fc6-af40-e842ef019955" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="19"/>
+				<designed target="Y" value="-4"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="6"/>
+				<designed target="Height" value="4"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="2"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="0"/>
+			</object>
+			<object access-modifier="private" name="Rectangle_3" display-name="Rectangle_3" uuid="c06efd25-f80e-488d-b859-9b5e1e706f29" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="19"/>
+				<designed target="Y" value="5"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="6"/>
+				<designed target="Height" value="2"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="1"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="1"/>
+			</object>
+			<object access-modifier="private" name="Rectangle_4" display-name="Rectangle_4" uuid="c75a6de7-efc0-43aa-9fec-352b3cf30f8e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="3"/>
+				<designed target="Y" value="5"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="6"/>
+				<designed target="Height" value="2"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="1"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="1"/>
+			</object>
+			<object access-modifier="private" name="Rectangle_5" display-name="Rectangle_5" uuid="967e5972-be69-46b1-85ed-a35154e1749d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+				<designed target="X" value="3"/>
+				<designed target="Y" value="5"/>
+				<designed target="Rotation" value="90"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="6"/>
+				<designed target="Height" value="2"/>
+				<designed target="RoundingRadius" value="0"/>
+				<designed target="PenColor" value="4278190080"/>
+				<designed target="PenStyle" value="1"/>
+				<designed target="PenWidth" value="1"/>
+				<designed target="BrushColor" value="4278190080"/>
+				<designed target="BrushStyle" value="1"/>
+			</object>
+		</object>
+	</object>
+	<param access-modifier="private" name="in_AlarmUPS" display-name="in_AlarmUPS" uuid="3b65cec7-db73-4e1f-9ee5-0cb6d64cbea2" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="RezPit" display-name="RezPit" uuid="d63b9dfa-ab20-491c-8c79-f7c0ed5d9daa" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Source" ref="here.in_RezPit"/>
+	</object>
+	<param access-modifier="private" name="in_RezPit" display-name="in_RezPit" uuid="35b629a0-9704-4a67-b618-ff5c599b0e9c" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="AlarmUPS" display-name="AlarmUPS" uuid="c97aa9f3-0ab3-4031-9033-51a8ffc12079" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Source" ref="here.in_AlarmUPS"/>
+	</object>
+</type>
+

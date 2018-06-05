@@ -1,0 +1,47 @@
+<type access-modifier="private" name="Symbol_Diag_Uso" display-name="Symbol_Diag_Uso" uuid="cb64ad45-6b13-489b-ad38-bccd97039666" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<object access-modifier="private" name="Diag_Door_8" display-name="Diag_Door_8" uuid="a05ec9ae-0fa0-4827-a81c-4ef28e00eff0" base-type="Diag_Door" base-type-id="7ffbf68e-21ad-4e8f-8c3f-bcac2ee8f763">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1.1000000000000001"/>
+		<init target="in_Signal">
+			<object access-modifier="private" uuid="6f21f122-3287-489b-94a8-c2f4cdb939bf" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="true"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="Path" value="OPEN"/>
+				<init target="ParentSource" ref="here.in_Object"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="Diag_Alarm220V_9" display-name="Diag_Alarm220V_9" uuid="3866c526-70f5-4010-9f36-2a77c362f543" base-type="Diag_Alarm220V" base-type-id="7115719d-d5bc-404f-ad73-93a76d16bec8">
+		<designed target="X" value="40"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1.1000000000000001"/>
+		<init target="in_Signal1">
+			<object access-modifier="private" uuid="f36d0c71-8108-46b4-bcea-758f5a9f83b4" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="true"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="Path" value="NoVol220P"/>
+				<init target="ParentSource" ref="here.in_Object"/>
+			</object>
+		</init>
+		<init target="in_Signal2">
+			<object access-modifier="private" uuid="69e30314-1a97-4306-bb9e-f47fbc5f7750" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="true"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.in_Object"/>
+				<init target="Path" value="NoVol220S"/>
+			</object>
+		</init>
+	</object>
+	<param access-modifier="private" name="in_Object" display-name="in_Object" uuid="9e72ecf5-ce2b-4a6c-832c-631c2b78ca8e" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+</type>
+

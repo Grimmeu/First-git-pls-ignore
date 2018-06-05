@@ -1,0 +1,23 @@
+<type access-modifier="private" name="Symbol_VU0" display-name="Symbol_VU0" uuid="3d066046-b3b3-4198-aab2-38cc39582554" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<object access-modifier="private" name="Alarm_Circle_Fault_3" display-name="Alarm_Circle_Fault_3" uuid="ac490ed9-94bc-49b9-9fee-9355663d3a92" base-type="Alarm_Circle_Fault" base-type-id="0b9bcad8-251e-4292-a51f-a0235639ea9a">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<init target="In_Object" ref="here.In_Object"/>
+	</object>
+	<object access-modifier="private" name="Alarm_Circle_LHH_3" display-name="Alarm_Circle_LHH_3" uuid="f8ff7e25-829e-4566-92a8-9890d62a4eae" base-type="Alarm_Circle_LHH" base-type-id="bc90286f-3b9c-4221-9d3b-31d17c1e16c5">
+		<designed target="X" value="90"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<init target="In_Object" ref="here.In_Object"/>
+	</object>
+	<param access-modifier="private" name="In_Object" display-name="In_Object" uuid="e6f2370e-6752-4aa5-8f49-373f3d4c5bb2" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+</type>
+

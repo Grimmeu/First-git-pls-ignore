@@ -1,0 +1,97 @@
+<type access-modifier="private" name="Popup_Alarms" display-name="Popup_Alarms" uuid="4c5cefcb-ef0c-498c-83d4-75a7989d2f9b" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<designed target="Width" value="1200"/>
+	<designed target="Height" value="600"/>
+	<designed target="PenColor" value="4278190080"/>
+	<designed target="PenStyle" value="0"/>
+	<designed target="PenWidth" value="1"/>
+	<designed target="BrushColor" value="4293980400"/>
+	<designed target="BrushStyle" value="1"/>
+	<designed target="WindowX" value="0"/>
+	<designed target="WindowY" value="0"/>
+	<designed target="WindowWidth" value="1200"/>
+	<designed target="WindowHeight" value="600"/>
+	<designed target="WindowCaption" value="MainForm"/>
+	<designed target="ShowWindowCaption" value="true"/>
+	<designed target="ShowWindowMinimize" value="true"/>
+	<designed target="ShowWindowMaximize" value="true"/>
+	<designed target="ShowWindowClose" value="true"/>
+	<designed target="AlwaysOnTop" value="false"/>
+	<designed target="WindowSizeMode" value="0"/>
+	<designed target="WindowBorderStyle" value="1"/>
+	<designed target="WindowState" value="0"/>
+	<designed target="WindowScalingMode" value="2"/>
+	<designed target="MonitorNumber" value="0"/>
+	<designed target="WindowPosition" value="0"/>
+	<designed target="WindowCloseMode" value="0"/>
+	<object access-modifier="private" name="AlphaAlarmsAxControl" display-name="AlphaAlarmsAxControl" uuid="86573e79-5885-4d30-98e1-16018220f05b" base-type="AlphaAlarmsAxControl" base-type-id="9508eca3-f80d-4232-90e7-7a3607bc56fa">
+		<designed target="X" value="-4"/>
+		<designed target="Y" value="0"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Width" value="1200"/>
+		<designed target="Height" value="600"/>
+		<designed target="ConfigurationFolder" value=""/>
+		<designed target="ActiveMode" value="1"/>
+		<designed target="EnableAlarmReception" value="true"/>
+		<designed target="ShowMilliseconds" value="true"/>
+		<designed target="RowHeight" value="25"/>
+		<designed target="OperativeVisibleRowCount" value="500"/>
+		<designed target="HistoricalVisibleRowCount" value="0"/>
+		<designed target="ButtonPanelVisible" value="true"/>
+		<designed target="Mute" value="true"/>
+		<designed target="FilterActive" value="false"/>
+		<designed target="IsAdvancedFilterActive" value="true"/>
+		<designed target="EventDisplayOrder" value="0"/>
+		<designed target="IsFullAccessAllowed" value="true"/>
+		<designed target="CurrentEventsAvailable" value="true"/>
+		<designed target="EventHistoryAvailable" value="true"/>
+		<designed target="FilterAvailable" value="true"/>
+		<designed target="SnapshotAvailable" value="true"/>
+		<designed target="ClearingCurrentEventsAvailable" value="true"/>
+		<designed target="SoundPlaybackManagmentAvailable" value="true"/>
+		<designed target="WindowsFixed" value="true"/>
+		<designed target="EditingSettingsAvailable" value="true"/>
+		<designed target="AcknowledgmentAvailable" value="true"/>
+		<designed target="EventHistoryPagedViewingAvailable" value="true"/>
+		<designed target="PrintingAvailable" value="true"/>
+		<designed target="FollowLatestEvent" value="true"/>
+		<designed target="EnableSortingOnGridHeader" value="true"/>
+		<designed target="EventTableSortAvailability" value="true"/>
+		<designed target="ExportDataAvailability" value="true"/>
+		<designed target="FileSystemSafeMode" value="false"/>
+		<designed target="AlwaysOnTop" value="true"/>
+		<designed target="ActiveViewMode" value="0"/>
+		<designed target="AreaTreeVisible" value="false"/>
+	</object>
+	<param access-modifier="private" name="in_Name" display-name="in_Name" uuid="dd130380-c994-47ed-9895-ee380a132122" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d"/>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" event="Opened">
+		<body kind="javascript">
+			<![CDATA[
+AlphaAlarmsAxControl.EditingSettingsAvailable = true;
+AlphaAlarmsAxControl.IsFullAccessAllowed = true;
+AlphaAlarmsAxControl.FilterAvailable = true;
+AlphaAlarmsAxControl.FilterActive = true;
+AlphaAlarmsAxControl.IsAdvancedFilterActive = true;
+//Ввод фильтра с коротким название вентустановки
+here.AlphaAlarmsAxControl.SetFilter(here.WindowCaption,0,"");
+//Формирование начальной и конечной даты
+var starttime = new Date();
+var endtime = new Date();
+//текущая дата минус 1 месяц.
+starttime.setMonth(starttime.getMonth()-1);
+//Задание интервала времени текущая дата минус 1 месяц/текущая дата
+here.AlphaAlarmsAxControl.SetHistoricalInterval(starttime,endtime);
+
+]]>
+		</body>
+	</do-on>
+	<init target="WindowCaption" ref="here.in_Name"/>
+</type>
+

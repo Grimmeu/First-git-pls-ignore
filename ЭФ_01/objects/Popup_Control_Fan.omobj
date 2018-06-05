@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Popup_Control_Fan" display-name="Popup_Control_Fan" uuid="f7bcb50e-97c5-4da5-9b41-ad477a10b80a" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<designed target="Width" value="384"/>
+	<designed target="Height" value="235"/>
+	<designed target="PenColor" value="4278190080"/>
+	<designed target="PenStyle" value="0"/>
+	<designed target="PenWidth" value="1"/>
+	<designed target="BrushColor" value="0xff336673"/>
+	<designed target="BrushStyle" value="1"/>
+	<designed target="WindowX" value="768"/>
+	<designed target="WindowY" value="400"/>
+	<designed target="WindowWidth" value="384"/>
+	<designed target="WindowHeight" value="235"/>
+	<designed target="WindowCaption" value="Окно управления"/>
+	<designed target="WindowBorderStyle" value="2"/>
+	<designed target="ShowWindowCaption" value="true"/>
+	<designed target="ShowWindowMinimize" value="false"/>
+	<designed target="ShowWindowMaximize" value="false"/>
+	<designed target="ShowWindowClose" value="true"/>
+	<designed target="WindowSizeMode" value="0"/>
+	<designed target="WindowScalingMode" value="0"/>
+	<designed target="WindowCloseMode" value="0"/>
+	<object access-modifier="private" name="Top_Rectangle" display-name="Top_Rectangle" uuid="7d9e653d-a1c4-413b-9c54-24e8d915c01d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="2"/>
+		<designed target="Y" value="3"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip"/>
+		<designed target="Width" value="379"/>
+		<designed target="Height" value="50"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xffffffff"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xff6399a0"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="FullName" display-name="FullName" uuid="f6d50e0c-7bd1-43a1-a667-6cd524b79467" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="6.5"/>
+			<designed target="Y" value="3.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="366"/>
+			<designed target="Height" value="43.999999999999993"/>
+			<designed target="Text" value="????"/>
+			<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<body>
+					<![CDATA[Str.Replace(Cmd.Description, ". Команда управления", "")]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="Control" display-name="Control" uuid="74be7512-d670-49a4-ad92-3a976f1cb763" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba">
+		<designed target="X" value="47"/>
+		<designed target="Y" value="71"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="379"/>
+		<designed target="Height" value="95"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="2badff53-107d-48ee-9126-af03f6eb6709" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="0"/>
+			<designed target="Y" value="0"/>
+		</object>
+		<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="e31d9f91-ee1e-4c53-8c67-ac0c543af019" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="-45"/>
+			<designed target="Y" value="0"/>
+		</object>
+		<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="0f234cf9-0536-4531-b92d-15d985a8e252" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="-45"/>
+			<designed target="Y" value="95"/>
+		</object>
+		<object access-modifier="private" name="Point_4" display-name="Point_4" uuid="ca6d6e15-38ac-4e88-8d82-0e63fc84bcdd" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="334"/>
+			<designed target="Y" value="95"/>
+		</object>
+		<object access-modifier="private" name="Point_5" display-name="Point_5" uuid="c503eef4-5473-4baa-9986-658f4e86d629" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="334"/>
+			<designed target="Y" value="0"/>
+		</object>
+		<object access-modifier="private" name="Point_6" display-name="Point_6" uuid="bf454d2f-99b9-4b0b-992a-f3be0b99fd9e" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="88"/>
+			<designed target="Y" value="0"/>
+		</object>
+		<object access-modifier="private" name="Name" display-name="Name" uuid="e0168252-ce22-49e6-b065-89cd082cd765" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="7.6000000000000227"/>
+			<designed target="Y" value="-9.9999999999999432"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="72.399999999999977"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="Управление"/>
+			<designed target="Font" value="Arial,9,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="33"/>
+		</object>
+		<object access-modifier="private" name="On" display-name="On" uuid="32f2e566-834f-4222-afb4-941bbc2ad463" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1">
+			<designed target="X" value="73"/>
+			<designed target="Y" value="11"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="143"/>
+			<designed target="Height" value="32"/>
+			<designed target="Text" value="ВКЛЮЧИТЬ"/>
+			<designed target="Font" value="Arial,9,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xff00aa00"/>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed">
+				<body kind="om">
+					<![CDATA[if (here.EnableTU_BoolToken.Value == true)
+{	
+	here.CommandCode = 2;
+	TU_Command = "Включить";
+	Action_OpenPopup.Invoke();
+}
+else
+{
+	here.SendTU_Action_Denied.Invoke();
+}]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Visible">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Mode==1]]>
+					</condition>
+					<expr>
+						<![CDATA[False]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Mode==0]]>
+					</condition>
+					<expr>
+						<![CDATA[True]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Off" display-name="Off" uuid="dd722f43-9e6c-43a0-918a-b14641c468bf" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1">
+			<designed target="X" value="73"/>
+			<designed target="Y" value="53"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="143"/>
+			<designed target="Height" value="32"/>
+			<designed target="Text" value="ОТКЛЮЧИТЬ"/>
+			<designed target="Font" value="Arial,9,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffaa0000"/>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed">
+				<body kind="om">
+					<![CDATA[if (here.EnableTU_BoolToken.Value == true)
+{	
+	here.CommandCode = 1;
+	TU_Command = "Отключить";
+	Action_OpenPopup.Invoke();
+}
+else
+{
+	here.SendTU_Action_Denied.Invoke();
+}]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Visible">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Mode==1]]>
+					</condition>
+					<expr>
+						<![CDATA[False]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Mode==0]]>
+					</condition>
+					<expr>
+						<![CDATA[True]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="ModeText" display-name="ModeText" uuid="81d4e0e5-b426-4830-8d1d-0e0488c5385d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="-42"/>
+			<designed target="Y" value="1"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="false"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="373.99999999999994"/>
+			<designed target="Height" value="92"/>
+			<designed target="Text" value="Управление выполняется из диспетчерской"/>
+			<designed target="Font" value="MS Shell Dlg 2,20,-1,5,50,0,0,0,0,0"/>
+			<designed target="FontColor" value="4278190080"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Visible">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Mode==1]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Mode==0]]>
+					</condition>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="MotoResource" display-name="MotoResource" uuid="8426f7dd-04f7-4250-b9de-ec50138dc4f3" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba">
+		<designed target="X" value="47"/>
+		<designed target="Y" value="181"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip"/>
+		<designed target="Width" value="379"/>
+		<designed target="Height" value="49.999999999999972"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="ba5ba393-75eb-4d27-992c-f277237294b0" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="0"/>
+			<designed target="Y" value="0"/>
+		</object>
+		<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="fbfb6a9d-8bb0-4a3c-86d3-265b885b2cd6" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="-45"/>
+			<designed target="Y" value="0"/>
+		</object>
+		<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="566e2ed0-523c-443d-a032-b37fdfb98571" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="-45"/>
+			<designed target="Y" value="49.999999999999972"/>
+		</object>
+		<object access-modifier="private" name="Point_4" display-name="Point_4" uuid="a1e953e5-8981-4d0b-93ec-10424bb55a89" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="334"/>
+			<designed target="Y" value="49.999999999999972"/>
+		</object>
+		<object access-modifier="private" name="Point_5" display-name="Point_5" uuid="cffab8db-e903-4dc5-8395-27aa38e227c2" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="334"/>
+			<designed target="Y" value="0"/>
+		</object>
+		<object access-modifier="private" name="Point_6" display-name="Point_6" uuid="5900e6a7-3241-4b87-a9c4-13a2408085c5" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+			<designed target="X" value="88"/>
+			<designed target="Y" value="0"/>
+		</object>
+		<object access-modifier="private" name="Name" display-name="Name" uuid="c0e56406-6f76-4e83-b6bf-a93101127902" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="7.6000000000000227"/>
+			<designed target="Y" value="-9.9999999999999432"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="72.399999999999977"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value="Моторесурс"/>
+			<designed target="Font" value="Arial,9,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="33"/>
+		</object>
+		<object access-modifier="private" name="Background_Value" display-name="Background_Value" uuid="4c293fc0-8e97-4668-98f6-d5082bbc3c8e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="-1"/>
+			<designed target="Y" value="16.5"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip"/>
+			<designed target="Width" value="69"/>
+			<designed target="Height" value="20"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xff000000"/>
+			<designed target="PenStyle" value="0"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xff3e5c64"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Value" display-name="Value" uuid="a2ae5e9d-7869-4712-9e94-cba10987638c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="0.3944444444444315"/>
+				<designed target="Y" value="-0.10000000000005116"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip"/>
+				<designed target="Width" value="69"/>
+				<designed target="Height" value="20"/>
+				<designed target="Text" value="????"/>
+				<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="0xffffffff"/>
+				<designed target="TextAlignment" value="132"/>
+				<do-trace access-modifier="private" target="Text">
+					<conditional-expr>
+						<condition>
+							<![CDATA[moto.Quality < 192]]>
+						</condition>
+						<expr>
+							<![CDATA["****"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[moto.Quality >= 192]]>
+						</condition>
+						<expr>
+							<![CDATA[moto.ValueAsString]]>
+						</expr>
+					</conditional-expr>
+				</do-trace>
+				<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="2d29edb0-2f03-4a46-a773-19f0db31e7f4" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+					<designed target="X" value="0.20555555555557703"/>
+					<designed target="Y" value="0.37666666666677884"/>
+					<designed target="Rotation" value="0"/>
+					<designed target="Scale" value="1"/>
+					<designed target="Visible" value="false"/>
+					<designed target="Enabled" value="true"/>
+					<designed target="Tooltip"/>
+					<designed target="Width" value="68.333333333333428"/>
+					<designed target="Height" value="19.833333333333314"/>
+					<designed target="RoundingRadius" value="0"/>
+					<designed target="PenColor" value="4278190080"/>
+					<designed target="PenStyle" value="1"/>
+					<designed target="PenWidth" value="3"/>
+					<designed target="BrushColor" value="4278190080"/>
+					<designed target="BrushStyle" value="0"/>
+					<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseRightClick">
+						<body kind="javascript">
+							<![CDATA[Action_Context.OpenAtX = ScreenX(50, this.Width);
+Action_Context.OpenAtY = ScreenY(0, this.Height-35);
+
+Alias_str = moto.Path;
+Action_Context.Invoke();]]>
+						</body>
+					</do-on>
+				</object>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+					<body kind="om">
+						<![CDATA[Background_Value.Value.Select_Rectangle.Visible = true;]]>
+					</body>
+				</do-on>
+				<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+					<body kind="om">
+						<![CDATA[Background_Value.Value.Select_Rectangle.Visible = false;]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Units" display-name="Units" uuid="39c6b8b7-ec4e-4417-bcd6-dcf55ffab769" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="77.399999999999977"/>
+				<designed target="Y" value="-1.4000000000000341"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip"/>
+				<designed target="Width" value="46.39999999999992"/>
+				<designed target="Height" value="20"/>
+				<designed target="Text" value="????"/>
+				<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="0xffffffff"/>
+				<designed target="TextAlignment" value="132"/>
+				<do-trace access-modifier="private" target="Text">
+					<body>
+						<![CDATA[moto.Units]]>
+					</body>
+				</do-trace>
+			</object>
+		</object>
+	</object>
+	<object access-modifier="private" name="Cmd" display-name="Cmd" uuid="3979fe72-56b5-4f77-b338-45fea288c76d" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="Cmd"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="moto" display-name="moto" uuid="96cc0f1a-a293-47c0-853d-26a654a2ca96" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="moto.tm_hour"/>
+		<init target="Source" ref="Object"/>
+	</object>
+	<object access-modifier="private" name="Object" display-name="Object" uuid="39ee9581-6993-4d81-8ec3-8623a9c93ba3" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="in_Object"/>
+	</object>
+	<object access-modifier="private" name="ControlRoom" display-name="ControlRoom" uuid="d115b242-b168-40cd-88bc-74d0825fbf76" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="here.in_ControlRoom"/>
+	</object>
+	<param access-modifier="private" name="in_ControlRoom" display-name="in_ControlRoom" uuid="79fa1a2f-f6b5-416e-9005-3bb1cd259a74" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<param access-modifier="private" name="in_Object" display-name="in_Object" uuid="c6520ead-0395-48b1-813e-30ae5b9c1fdb" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="Action_OpenPopup" display-name="Action_OpenPopup" uuid="640142b0-091c-408b-b31a-c556902dae28" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95">
+		<designed target="Enabled" value="true"/>
+		<designed target="InvokeTrigger" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="open-dialog" event="Invoked">
+			<object access-modifier="private" uuid="69c3fb97-3bf8-43ec-b434-070f2db2dc4d" base-type="Send_TU" base-type-id="cc78bdf0-fc92-45bb-a3e3-f5187affa497">
+				<init target="in_Object" ref="here.Object"/>
+				<init target="in_ControlRoom" ref="here.ControlRoom"/>
+				<init target="TU_Command" ref="here.TU_Command"/>
+				<init target="in_CommandCode" ref="here.CommandCode"/>
+				<init target="in_TU_Command" ref="here.TU_Command"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Action_Context" display-name="Action_Context" uuid="3fb3bed2-577e-4f6d-81cb-c5ab7ca45088" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95">
+		<designed target="Enabled" value="true"/>
+		<designed target="InvokeTrigger" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="open-new" event="Invoked">
+			<object access-modifier="private" uuid="f490921a-a5e5-4066-87e2-735c5da656d6" base-type="Trends" base-type-id="1b60c8ce-03ea-4bcd-854d-04a4b00a963f">
+				<init target="WindowX" ref="Action_Context.OpenAtX"/>
+				<init target="WindowY" ref="Action_Context.OpenAtY"/>
+				<init target="in_Object" ref="here.Object"/>
+				<init target="Alias_str" ref="here.Alias_str"/>
+			</object>
+		</do-on>
+		<object access-modifier="private" name="OpenAtX" display-name="OpenAtX" uuid="c643cf6c-c765-444b-8f18-457768e391b4" base-type="int32" base-type-id="74222947-f188-4195-8e0e-e33bd9827255"/>
+		<object access-modifier="private" name="OpenAtY" display-name="OpenAtY" uuid="c111ffd9-c8a7-498b-90eb-2b002f9f0a29" base-type="int32" base-type-id="74222947-f188-4195-8e0e-e33bd9827255"/>
+	</object>
+	<object access-modifier="private" name="EnableTU_BoolToken" display-name="EnableTU_BoolToken" uuid="5c26f366-f550-4c3a-94e3-9c1544932810" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59">
+		<init target="Right" value="EnableTU"/>
+		<init target="SecurityContext" ref="here.SecurityContext"/>
+		<init target="Application" value="Alpha.HMI"/>
+	</object>
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="d127ea7a-cb05-49f7-92b6-b6442531f1e3" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd"/>
+	<object access-modifier="private" name="SendTU_Action_Denied" display-name="SendTU_Action_Denied" uuid="f9f71c04-ffdc-4e9e-8862-d1b36a0e397c" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95">
+		<designed target="Enabled" value="true"/>
+		<designed target="InvokeTrigger" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="open-dialog" event="Invoked">
+			<object access-modifier="private" uuid="ffdab6ec-6395-421d-9e4e-54b0350cbe64" base-type="Exit_Denied" base-type-id="163ecc5b-1a1f-40ca-9b24-952a950c2981">
+				<init target="Error" value="Недостаточно прав для подачи команд телеуправления!"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Alias_str" display-name="Alias_str" uuid="8b06d8e8-0ca3-43cc-b0f2-cbd220db4e8a" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d"/>
+	<object access-modifier="private" name="TU_Command" display-name="TU_Command" uuid="e59b1a5d-4579-4197-82b3-f39957124ca8" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d"/>
+	<designed target="AlwaysOnTop" value="false"/>
+	<designed target="WindowState" value="0"/>
+	<designed target="MonitorNumber" value="0"/>
+	<designed target="WindowPosition" value="0"/>
+	<object access-modifier="private" name="CommandCode" display-name="CommandCode" uuid="fabe4c2d-cedb-420b-a54d-64291aecbf1d" base-type="uint32" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e"/>
+	<object access-modifier="private" name="Mode" display-name="Mode" uuid="8f292b3e-6048-4e56-bebb-883be79de691" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="mode"/>
+		<init target="Source" ref="ControlRoom"/>
+	</object>
+</type>
+

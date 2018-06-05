@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Object_Diag_Port" display-name="Object_Diag_Port" uuid="e9a6da9d-731e-4bb3-862d-eac0bcde8dcd" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<object access-modifier="private" name="Text_24" display-name="Text_24" uuid="0540243c-3c1e-4392-ba50-269fa8aac8ff" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="334"/>
+		<designed target="Y" value="115"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="86"/>
+		<designed target="Height" value="20"/>
+		<designed target="Text" value="***"/>
+		<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="TextAlignment" value="132"/>
+		<do-trace access-modifier="private" target="Text">
+			<body>
+				<![CDATA[Size]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Text_40" display-name="Text_40" uuid="f83f4632-d25d-4fbc-b422-ec521bd84387" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="427"/>
+		<designed target="Y" value="114"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip"/>
+		<designed target="Width" value="86"/>
+		<designed target="Height" value="20"/>
+		<designed target="Text" value="***"/>
+		<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="TextAlignment" value="132"/>
+		<do-trace access-modifier="private" target="Text">
+			<body>
+				<![CDATA[Speed]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Text_56" display-name="Text_56" uuid="a4dd54aa-caf4-4d49-98cd-75d392b62c10" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="518"/>
+		<designed target="Y" value="114"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="86"/>
+		<designed target="Height" value="20"/>
+		<designed target="Text" value="***"/>
+		<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="0xff000000"/>
+		<designed target="TextAlignment" value="132"/>
+		<do-trace access-modifier="private" target="Text">
+			<body>
+				<![CDATA[State]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="FontColor">
+			<conditional-expr>
+				<condition>
+					<![CDATA[here.Alm.Value==1]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Text_72" display-name="Text_72" uuid="f59bea06-9d30-4f13-900a-0c8595145c33" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="700"/>
+		<designed target="Y" value="114"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="86"/>
+		<designed target="Height" value="20"/>
+		<designed target="Text" value="***"/>
+		<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="TextAlignment" value="132"/>
+		<do-trace access-modifier="private" target="Text">
+			<body>
+				<![CDATA[Out]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Text_73" display-name="Text_73" uuid="846ed194-e7c5-428a-9b45-13dd6eae0489" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="609"/>
+		<designed target="Y" value="115"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="86"/>
+		<designed target="Height" value="20"/>
+		<designed target="Text" value="***"/>
+		<designed target="Font" value="Arial,10,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="TextAlignment" value="132"/>
+		<do-trace access-modifier="private" target="Text">
+			<body>
+				<![CDATA[In]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Server" display-name="Server" uuid="5c46cc23-9e41-47f8-a65b-cc8f4fb9f39c" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="in_Server"/>
+		<init target="Path" ref="in_Object"/>
+	</object>
+	<object access-modifier="private" name="Size" display-name="Size" uuid="9d3e2f04-8aa3-4d43-999b-b7c1b425d291" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="Server"/>
+		<init target="Path" value="Col0.Display"/>
+	</object>
+	<param access-modifier="private" name="in_Object" display-name="in_Object" uuid="53904501-ad8c-4361-806c-a2a915ce02d8" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d"/>
+	<param access-modifier="private" name="in_Server" display-name="in_Server" uuid="a0e1af58-2e6d-412b-96ba-67e1af295f9e" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="Speed" display-name="Speed" uuid="941615c9-7bfe-43aa-814f-c1d7bcd1569c" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="Server"/>
+		<init target="Path" value="Col1.Display"/>
+	</object>
+	<object access-modifier="private" name="State" display-name="State" uuid="2f11faeb-3b7f-4dee-8ce2-2af18421885f" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="Server"/>
+		<init target="Path" value="Col3.Display"/>
+	</object>
+	<object access-modifier="private" name="In" display-name="In" uuid="9d20a42e-a763-4b58-9475-dd89e5f650bf" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="Server"/>
+		<init target="Path" value="Col5.Display"/>
+	</object>
+	<object access-modifier="private" name="Out" display-name="Out" uuid="701d3072-eb64-48fe-9d22-0b3db9ced8d4" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="Server"/>
+		<init target="Path" value="Col6.Display"/>
+	</object>
+	<object access-modifier="private" name="Exit_BoolToken" display-name="Exit_BoolToken" uuid="3f427136-72ae-4ac5-98d0-64449f10e097" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59">
+		<init target="Right" value="EnableExit"/>
+		<init target="SecurityContext" ref="here.SecurityContext"/>
+		<init target="Application" value="Alpha.HMI"/>
+	</object>
+	<object access-modifier="private" name="Use" display-name="Use" uuid="6604d1fa-ea61-4389-933f-0931a6db67d8" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="Server"/>
+		<init target="Path" value="Use"/>
+	</object>
+	<object access-modifier="private" name="Action_Denied" display-name="Action_Denied" uuid="62ec2d5e-eaf8-480c-b031-eea7b2c18084" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95">
+		<designed target="Enabled" value="true"/>
+		<designed target="InvokeTrigger" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="open-dialog" event="Invoked">
+			<object access-modifier="private" uuid="93da96b8-7508-454a-ae7a-89978ea1126f" base-type="Exit_Denied" base-type-id="163ecc5b-1a1f-40ca-9b24-952a950c2981">
+				<init target="Error" value="Недостаточно прав на выполнение действия"/>
+				<designed target="WindowBorderStyle" value="2"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="7ee13d08-2031-47d5-a708-92173ee10814" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd">
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="CurrentUserChanged">
+			<body kind="javascript">
+				<![CDATA[if (SecurityContext.GuestMode)
+	{
+	here.Bottom_Rectangle.Register_Info_Shadow.GroupRectangle.GroupName.Text="";
+	here.Bottom_Rectangle.Register_Info_Shadow.UserRectangle.UserName.Text="Незарегистрированный";
+	AlphaAlarmsAxControl_1.LogOff();
+	AlphaAlarmsAxControl_2.LogOff();
+	GenSource.Value="<Subcondition Message='. АРМ "+here.Network_1.ComputerName+". Отсутствует зарегистрированный пользователь. Используется гостевой доступ' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+	//here.SecurityContext.AsyncLogin("Оператор", "1");
+	}
+else
+{ 
+	here.Bottom_Rectangle.Register_Info_Shadow.GroupRectangle.GroupName.Text=here.SecurityContext.GroupDisplayName(here.SecurityContext.CurrentUser);
+	here.Bottom_Rectangle.Register_Info_Shadow.UserRectangle.UserName.Text=here.SecurityContext.CurrentUserDisplayName;
+	AlphaAlarmsAxControl_1.LogOn(SecurityContext.CurrentUser);
+	AlphaAlarmsAxControl_2.LogOn(SecurityContext.CurrentUser);
+	GenSource.Value="<Subcondition Message='. АРМ "+here.Network_1.ComputerName+". Регистрация пользователя под учетной записью "+here.SecurityContext.CurrentUser+" выполнена успешно' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+	}
+ ]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ConnectedChanged">
+			<body kind="javascript">
+				<![CDATA[if (SecurityContext.Connected) //& !SecurityContext.GuestMode)
+	{
+	//here.Bottom_Rectangle.Register_Info_Shadow.GroupRectangle.GroupName.Text="";
+	//here.Bottom_Rectangle.Register_Info_Shadow.UserRectangle.UserName.Text="Незарегистрированный";
+	//GenSource.Value="<Subcondition Message='. АРМ "+here.Network_1.ComputerName+". Установлена связь со службой регистрации пользователей' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+	here.SecurityContext.AsyncLogin("Оператор", "1");	
+	}
+else
+	{
+	here.Bottom_Rectangle.Register_Info_Shadow.GroupRectangle.GroupName.Text="";
+	here.Bottom_Rectangle.Register_Info_Shadow.UserRectangle.UserName.Text="Незарегистрированный"
+	GenSource.Value="<Subcondition Message='. АРМ "+here.Network_1.ComputerName+". Отсутствует связь со службой регистрации пользователей. "+here.SecurityContext.ConnectionError+" ' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+	}]]>
+			</body>
+		</do-on>
+	</object>
+	<param access-modifier="private" name="in_Server_1" display-name="in_Server_1" uuid="fd3f2cc5-912a-4800-bdfa-32106b89a87a" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="Snap_Shot" display-name="Snap_Shot" uuid="67650f8a-9d6b-40f2-81ef-aede691cb836" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Path" value="SnapShot"/>
+		<init target="Source" ref="here.in_Server_1"/>
+	</object>
+	<object access-modifier="private" name="CheckOff" display-name="CheckOff" uuid="50baad08-6ded-4f74-a1bb-bacfe0f27c76" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="817"/>
+		<designed target="Y" value="120"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="12"/>
+		<designed target="Height" value="11"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="2"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[if (here.Exit_BoolToken.Value==true)
+{
+	here.Use.Value = 1;
+	here.Snap_Shot=1;
+}
+else
+{
+	here.Action_Denied.Invoke();
+}]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="Visible">
+			<body>
+				<![CDATA[!TypeConvert.ToBool(here.Use.Value)]]>
+			</body>
+		</do-trace>
+		<init target="Visible" value="false"/>
+	</object>
+	<object access-modifier="private" name="CheckOn" display-name="CheckOn" uuid="4e4e2ee7-7e06-4fd8-a33a-666e0ba5f1dc" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="817.5"/>
+		<designed target="Y" value="119.5"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="12"/>
+		<designed target="Height" value="11"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="2"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="045089f2-3897-4d77-aba7-36874f629e9b" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba">
+			<designed target="X" value="-2.7333333333333485"/>
+			<designed target="Y" value="-3.4000000000000057"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="16"/>
+			<designed target="Height" value="18"/>
+			<designed target="PenColor" value="4278190080"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="2"/>
+			<designed target="BrushColor" value="4278190080"/>
+			<designed target="BrushStyle" value="0"/>
+			<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="7d162e9c-7591-4952-ad57-d809352cc7e3" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="0"/>
+				<designed target="Y" value="0"/>
+			</object>
+			<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="05f3570e-048c-469c-bc5b-e799339b10a8" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="9.3333333333333357"/>
+				<designed target="Y" value="12"/>
+			</object>
+			<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="33fc47ae-0824-425d-b342-80783895c786" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6">
+				<designed target="X" value="16"/>
+				<designed target="Y" value="-6"/>
+			</object>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[if (here.Exit_BoolToken.Value==true)
+{
+	here.Use.Value = 0;
+	here.Snap_Shot=1;
+}
+else
+{
+	here.Action_Denied.Invoke();
+}]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="Visible">
+			<body>
+				<![CDATA[here.Use.Value]]>
+			</body>
+		</do-trace>
+		<init target="Visible" value="false"/>
+	</object>
+	<object access-modifier="private" name="Alm" display-name="Alm" uuid="7f2ab644-fbbb-4fd0-8af2-a5dc714efbf8" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="Server"/>
+		<init target="Path" value="Alarm"/>
+	</object>
+</type>
+

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Popup_Trends" display-name="Popup_Trends" uuid="a207a08d-2776-4bb4-8812-1a13a1ab5400" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<designed target="Width" value="1220"/>
+	<designed target="Height" value="600"/>
+	<designed target="PenColor" value="4278190080"/>
+	<designed target="PenStyle" value="0"/>
+	<designed target="PenWidth" value="1"/>
+	<designed target="BrushColor" value="4293980400"/>
+	<designed target="BrushStyle" value="1"/>
+	<designed target="WindowX" value="350"/>
+	<designed target="WindowY" value="300"/>
+	<designed target="WindowWidth" value="1220"/>
+	<designed target="WindowHeight" value="600"/>
+	<designed target="WindowCaption" value="Alpha.Trends"/>
+	<designed target="WindowBorderStyle" value="2"/>
+	<designed target="ShowWindowCaption" value="true"/>
+	<designed target="ShowWindowMinimize" value="true"/>
+	<designed target="ShowWindowMaximize" value="true"/>
+	<designed target="ShowWindowClose" value="true"/>
+	<designed target="WindowSizeMode" value="0"/>
+	<designed target="WindowScalingMode" value="0"/>
+	<designed target="WindowCloseMode" value="0"/>
+	<object access-modifier="private" name="AlphaTrendsAxControl_1" display-name="AlphaTrendsAxControl_1" uuid="f0371b28-4ec0-45f5-bd13-7f5bd73a8099" base-type="AlphaTrendsAxControl" base-type-id="f6fdc6e3-5677-49b3-9540-ed718f10a8c3">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Width" value="1220"/>
+		<designed target="Height" value="600"/>
+		<designed target="ActiveMode" value="1"/>
+		<designed target="Item"/>
+		<designed target="ShowDataPoints" value="false"/>
+		<designed target="ShowMarkerPoints" value="true"/>
+		<designed target="ShowMarkerLabels" value="true"/>
+		<designed target="ShowSources" value="true"/>
+		<designed target="ShowLegend" value="true"/>
+		<designed target="GlobalRanges" value="false"/>
+		<designed target="LowRange" value="0"/>
+		<designed target="HighRange" value="50"/>
+		<designed target="AutoRange" value="true"/>
+		<designed target="AlwaysOnTop" value="false"/>
+		<designed target="YAxisPrecision" value="2"/>
+		<designed target="ShowToolbar" value="true"/>
+		<designed target="IsFullAccessAllowed" value="true"/>
+		<designed target="FileSystemSafeMode" value="false"/>
+	</object>
+	<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="Opened">
+		<body kind="javascript">
+			<![CDATA[//Задаем режим работы трендов и выбираем интервал для истории
+	var starttime = new Date();
+	var endtime = new Date();
+
+	if (mode == "Исторический режим")
+	{
+		AlphaTrendsAxControl_1.ActiveMode = 1;
+		here.WindowCaption = mode;
+		starttime.Hours=starttime.setHours(starttime.getHours()-1);
+		AlphaTrendsAxControl_1.SetHistoricalInterval(starttime,endtime);
+	}
+	else
+	{
+		AlphaTrendsAxControl_1.ActiveMode = 0;
+		here.WindowCaption = mode;
+	}
+
+/*
+//Создаем файл для хранения имени формы
+var Path = "D:\\Project\\popup";
+if( !Files.Exists( Path ) )
+	Files.CreateRecursiveFolder( Path );
+var PathName = Files.CombinePath( Path, "\\name.txt" );
+
+//Чтение из файла
+var currentName = Files.ReadTextFile( PathName );
+if (here.WindowCaption == currentName)
+{Close(Trends_popup);}
+
+//Запись в файл
+here.Files.WriteTextFile(PathName, here.WindowCaption);
+*/
+
+var FolderPath="D:\\Project\\ItemsForTrends";
+/*
+	Вот файл, из которого будем читать. Используем CombinePath. Подробнее о нём
+	см. в обработчике открытия формы.
+*/
+var filePath = Files.CombinePath( FolderPath, "\\ItemList.txt" );
+
+
+// читаем текущее содержимое файла и разбираем его
+	var curContent = Files.ReadTextFile( filePath );
+	var content = JSON.parse( curContent );
+	var i=0;
+	while (i<=content.index) {
+	AlphaTrendsAxControl_1.ForcedAddItem(content.Tag[i],content.Units[i],content.Description[i]);
+	i++;
+	}]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Files" display-name="Files" uuid="6ff63f79-7a2a-4aac-a4c1-ac86d76c6e67" base-type="FileSystem" base-type-id="34d744f9-7303-4077-a3f7-9c06c0945512"/>
+	<object access-modifier="private" name="Alias" display-name="Alias" uuid="acc289f7-10ed-4924-a532-722f493dce02" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="mode" display-name="mode" uuid="529b1834-88e3-4d76-b702-11fde60a3c7b" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d"/>
+	<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="WindowActivationChanged">
+		<body kind="om">
+			<![CDATA[if (!WindowActive)
+{
+	Close();
+}]]>
+		</body>
+	</do-on>
+	<designed target="AlwaysOnTop" value="false"/>
+	<designed target="WindowState" value="0"/>
+	<designed target="MonitorNumber" value="0"/>
+	<designed target="WindowPosition" value="0"/>
+</type>
+

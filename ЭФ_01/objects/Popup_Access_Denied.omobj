@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Popup_Access_Denied" display-name="Popup_Access_Denied" uuid="163ecc5b-1a1f-40ca-9b24-952a950c2981" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<designed target="Width" value="300"/>
+	<designed target="Height" value="150"/>
+	<designed target="PenColor" value="4278190080"/>
+	<designed target="PenStyle" value="0"/>
+	<designed target="PenWidth" value="1"/>
+	<designed target="BrushColor" value="4293980400"/>
+	<designed target="BrushStyle" value="1"/>
+	<designed target="WindowX" value="800"/>
+	<designed target="WindowY" value="400"/>
+	<designed target="WindowWidth" value="300"/>
+	<designed target="WindowHeight" value="150"/>
+	<designed target="WindowCaption" value="Ограничение прав доступа"/>
+	<designed target="WindowBorderStyle" value="1"/>
+	<designed target="ShowWindowCaption" value="true"/>
+	<designed target="ShowWindowMinimize" value="false"/>
+	<designed target="ShowWindowMaximize" value="false"/>
+	<designed target="ShowWindowClose" value="true"/>
+	<designed target="WindowSizeMode" value="0"/>
+	<designed target="WindowScalingMode" value="0"/>
+	<object access-modifier="private" name="OK_Button" display-name="OK_Button" uuid="add6fdff-6b4a-454d-b640-bc9c7eb9bfb6" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1">
+		<designed target="X" value="122"/>
+		<designed target="Y" value="90"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Width" value="65"/>
+		<designed target="Height" value="30"/>
+		<designed target="Text" value="ОК"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Tooltip"/>
+		<designed target="Font" value="Tahoma,9,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Enabled" value="true"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="close" event="ButtonPressed"/>
+	</object>
+	<object access-modifier="private" name="Error_Text" display-name="Error_Text" uuid="b7926d7f-24b0-4346-9e65-c5ac135ed3a1" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="7"/>
+		<designed target="Y" value="26"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip"/>
+		<designed target="Width" value="288.00000000000006"/>
+		<designed target="Height" value="41"/>
+		<designed target="Font" value="Tahoma,12,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="0xffff0000"/>
+		<designed target="TextAlignment" value="132"/>
+		<designed target="Text"/>
+		<init target="Text" ref="Error"/>
+	</object>
+	<designed target="WindowCloseMode" value="0"/>
+	<param access-modifier="private" name="Error" display-name="Error" uuid="c5bf7547-b08a-4d98-b4d4-51410b78ebda" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d"/>
+	<designed target="AlwaysOnTop" value="false"/>
+	<designed target="WindowState" value="0"/>
+	<designed target="MonitorNumber" value="0"/>
+	<designed target="WindowPosition" value="0"/>
+</type>
+

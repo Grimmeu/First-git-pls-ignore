@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Symbol_VU_3" display-name="Symbol_VU_3" uuid="4ebcddbc-43cb-448c-b9e2-8e8515e83775" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<object access-modifier="private" name="Object_Pump_1" display-name="Object_Pump_1" uuid="ae69fcd0-dd49-4e95-a6c8-558f4c99bf9e" base-type="Object_Pump" base-type-id="746d53ce-be38-422d-9038-d9095423a915">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="80"/>
+		<designed target="Rotation" value="0"/>
+		<init target="In_Object">
+			<object access-modifier="private" uuid="e4c4fff6-0967-4669-84d4-356136444ac3" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="ParentSource" ref="here.In_Object"/>
+				<init target="Path" value="Pump1"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="Object_Pump_2" display-name="Object_Pump_2" uuid="2eaba72d-ad25-4c3d-99ee-b05113a4f0d7" base-type="Object_Pump" base-type-id="746d53ce-be38-422d-9038-d9095423a915">
+		<designed target="X" value="70"/>
+		<designed target="Y" value="80"/>
+		<designed target="Rotation" value="0"/>
+		<init target="In_Object">
+			<object access-modifier="private" uuid="8c715a3e-a7a3-4722-8ad1-4cb77fff33d8" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="Path" value="Pump2"/>
+				<init target="ParentSource" ref="here.In_Object"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="Object_Pump_3" display-name="Object_Pump_3" uuid="c79d8c34-8b6e-49f9-a16c-0982dfa2ab29" base-type="Object_Pump" base-type-id="746d53ce-be38-422d-9038-d9095423a915">
+		<designed target="X" value="140"/>
+		<designed target="Y" value="80"/>
+		<designed target="Rotation" value="0"/>
+		<init target="In_Object">
+			<object access-modifier="private" uuid="d51bb859-5dde-4286-ad9c-38afe1dc1896" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+				<designed target="Active" value="false"/>
+				<designed target="UpdateRate" value="0"/>
+				<init target="Path" value="Pump3"/>
+				<init target="ParentSource" ref="here.In_Object"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="Alarm_Circle_Fault_1" display-name="Alarm_Circle_Fault_1" uuid="3066a4a1-79cd-420e-814c-4709c752c5ff" base-type="Alarm_Circle_Fault" base-type-id="0b9bcad8-251e-4292-a51f-a0235639ea9a">
+		<designed target="X" value="10"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<init target="In_Object" ref="here.In_Object"/>
+	</object>
+	<object access-modifier="private" name="Alarm_Circle_LHH_1" display-name="Alarm_Circle_LHH_1" uuid="2526d4b2-f2ee-48c8-adfe-c602e3e28cc6" base-type="Alarm_Circle_LHH" base-type-id="bc90286f-3b9c-4221-9d3b-31d17c1e16c5">
+		<designed target="X" value="127"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<init target="In_Object" ref="here.In_Object"/>
+	</object>
+	<param access-modifier="private" name="In_Object" display-name="In_Object" uuid="bc4cba78-be07-47a7-acdf-718cc8013d0a" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+</type>
+

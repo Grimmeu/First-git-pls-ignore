@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Popup_Send_TU" display-name="Popup_Send_TU" uuid="cc78bdf0-fc92-45bb-a3e3-f5187affa497" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<designed target="Width" value="400"/>
+	<designed target="Height" value="200"/>
+	<designed target="PenColor" value="4278190080"/>
+	<designed target="PenStyle" value="0"/>
+	<designed target="PenWidth" value="1"/>
+	<designed target="BrushColor" value="4293980400"/>
+	<designed target="BrushStyle" value="1"/>
+	<designed target="WindowX" value="760"/>
+	<designed target="WindowY" value="400"/>
+	<designed target="WindowWidth" value="400"/>
+	<designed target="WindowHeight" value="200"/>
+	<designed target="WindowCaption" value="Подача команды телеуправления"/>
+	<designed target="WindowBorderStyle" value="2"/>
+	<designed target="ShowWindowCaption" value="true"/>
+	<designed target="ShowWindowMinimize" value="false"/>
+	<designed target="ShowWindowMaximize" value="false"/>
+	<designed target="ShowWindowClose" value="true"/>
+	<designed target="WindowSizeMode" value="0"/>
+	<designed target="WindowScalingMode" value="0"/>
+	<designed target="WindowCloseMode" value="0"/>
+	<object access-modifier="private" name="Send_TU_Button" display-name="Send_TU_Button" uuid="bd32b1af-210b-45e6-93cf-a6cf070a9471" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1">
+		<designed target="X" value="31"/>
+		<designed target="Y" value="157"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Подать команду телеуправления"/>
+		<designed target="Width" value="150"/>
+		<designed target="Height" value="30"/>
+		<designed target="Text" value="Подать команду"/>
+		<designed target="Font" value="Tahoma,14,-1,5,50,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed">
+			<body kind="javascript">
+				<![CDATA[//запрет повторного нажатия кнопки на время выполнения скрипта
+here.Send_TU_Button.Enabled=false;
+//двухбайтная команда ТУ: старший байт - код диспетчерского пункта, младший - код команды ТУ
+here.Command_Name.Value=in_CommandCode+256;
+here.GenSource.Value="<Subcondition Message='. Команда ТУ <<"+here.TU_Text.Text+">> подана с АРМ "+here.Network_1.ComputerName+" пользователем под учетной записью "+here.SecurityContext.CurrentUser+" ' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+//задержка после записи в тег перед закрытием окна
+Delay.Active = true;
+/*Close();*/]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Cancel_Button" display-name="Cancel_Button" uuid="2f6c9edb-f65f-4ae9-b794-d1031fd0af49" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1">
+		<designed target="X" value="221"/>
+		<designed target="Y" value="157"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value="Отказаться от подачи команды телеуправления"/>
+		<designed target="Width" value="150"/>
+		<designed target="Height" value="30"/>
+		<designed target="Text" value="Отмена"/>
+		<designed target="Font" value="Tahoma,14,-1,5,50,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="close" event="ButtonPressed"/>
+	</object>
+	<object access-modifier="private" name="TU_Text" display-name="TU_Text" uuid="46335e43-b458-4196-8d89-e84da8409077" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="3"/>
+		<designed target="Y" value="88"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="395"/>
+		<designed target="Height" value="53"/>
+		<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="TextAlignment" value="132"/>
+		<designed target="Text" value="Text"/>
+		<init target="Text" ref="here.in_TU_Command"/>
+	</object>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="839d2e4e-4109-4c79-a63a-63c5daa2baca" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="2"/>
+		<designed target="Y" value="51"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="393.99999999999994"/>
+		<designed target="Height" value="31"/>
+		<designed target="Text" value="Команда телеуправления"/>
+		<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="TextAlignment" value="132"/>
+	</object>
+	<object access-modifier="private" name="Object_Text" display-name="Object_Text" uuid="fc97474b-e7e5-4e78-90b6-68d343c26a1d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="2"/>
+		<designed target="Y" value="3"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="395.00000000000006"/>
+		<designed target="Height" value="45"/>
+		<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="TextAlignment" value="132"/>
+		<designed target="Text" value="Text"/>
+		<do-trace access-modifier="private" target="Text">
+			<body>
+				<![CDATA[Str.Replace(Command_Name.Description, ". Команда управления", "")]]>
+			</body>
+		</do-trace>
+	</object>
+	<param access-modifier="private" name="in_Object" display-name="in_Object" uuid="cdb95e76-530a-4699-b7b8-c880361bbbe3" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<param access-modifier="private" name="in_TU_Command" display-name="in_TU_Command" uuid="a4939b36-8c4e-4025-922a-3e44c8f71c48" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d"/>
+	<object access-modifier="private" name="Object" display-name="Object" uuid="72de2e8b-20ef-48f7-aa72-fb747e18ff2d" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="here.in_Object"/>
+	</object>
+	<object access-modifier="private" name="Command_Name" display-name="Command_Name" uuid="26644f75-8978-4b6c-9ee4-4153da731a2a" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="here.Object"/>
+		<init target="Path" value="Cmd"/>
+	</object>
+	<object access-modifier="private" name="GenSource" display-name="GenSource" uuid="3ef61bf5-b2f6-45e7-8d7a-723206f8c067" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="here.Object"/>
+		<init target="Path" value="Gen Source"/>
+	</object>
+	<object access-modifier="private" name="Network_1" display-name="Network_1" uuid="43207ada-4621-4b38-9c63-a61d4695a9c7" base-type="Network" base-type-id="aa841b9c-0610-4150-8495-3bfad7484a73"/>
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="ddf14394-3149-47da-8433-f50195508866" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd"/>
+	<object access-modifier="private" name="Delay" display-name="Delay" uuid="bf46badb-1c15-4395-b62d-40f6dd32a934" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a">
+		<designed target="Period" value="1000"/>
+		<designed target="Active" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="OnTimer">
+			<body kind="om">
+				<![CDATA[//активирование кнопки, останов таймера задержки записи в тег, закрытие окна
+here.Send_TU_Button.Enabled=true;
+here.Delay.Active = false;
+Close();]]>
+			</body>
+		</do-on>
+	</object>
+	<designed target="AlwaysOnTop" value="false"/>
+	<designed target="WindowState" value="0"/>
+	<designed target="MonitorNumber" value="0"/>
+	<designed target="WindowPosition" value="0"/>
+	<object access-modifier="private" name="in_CommandCode" display-name="in_CommandCode" uuid="2f024443-7155-4912-a2c6-29ec7516ae20" base-type="uint32" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e"/>
+</type>
+

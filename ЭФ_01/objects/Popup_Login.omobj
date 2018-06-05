@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Popup_Login" display-name="Popup_Login" uuid="a38ec196-76ee-40d8-915b-4a6672b996a4" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Width" value="350"/>
+	<designed target="Height" value="140"/>
+	<designed target="PenColor" value="4278190080"/>
+	<designed target="PenStyle" value="0"/>
+	<designed target="PenWidth" value="1"/>
+	<designed target="BrushColor" value="0xffd7d7d7"/>
+	<designed target="BrushStyle" value="1"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<designed target="WindowX" value="800"/>
+	<designed target="WindowY" value="400"/>
+	<designed target="WindowWidth" value="350"/>
+	<designed target="WindowHeight" value="140"/>
+	<designed target="WindowCaption" value="Регистрация пользователя в системе"/>
+	<designed target="ShowWindowCaption" value="true"/>
+	<designed target="ShowWindowMinimize" value="false"/>
+	<designed target="ShowWindowMaximize" value="false"/>
+	<designed target="ShowWindowClose" value="true"/>
+	<designed target="WindowSizeMode" value="0"/>
+	<designed target="WindowScalingMode" value="0"/>
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="62240c99-b641-490d-ae28-67084cd01042" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd">
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="LoginRejected">
+			<body kind="javascript">
+				<![CDATA[here.GenSource.Value="<Subcondition Message='. АРМ "+here.Network_1.ComputerName+". Попытка регистрации под учетной записью "+here.UserComboBox.UserList.GetLoginName(here.UserComboBox.SelectedIndex)+" завершилась неуспешно' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+here.SecurityContext.AsyncLogin("Оператор", "1");
+here.Action_1.Invoke();]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="CurrentUserChanged">
+			<body kind="javascript">
+				<![CDATA[if (here.Action_1.Enabled)
+Action_1.Invoke();]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="AutoCloseOnLogin" display-name="AutoCloseOnLogin" uuid="ad211d2c-6af3-4a5a-b98c-d45888608cec" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8"/>
+	<init target="AutoCloseOnLogin" value="false"/>
+	<param access-modifier="private" name="in_SERVER" display-name="in_SERVER" uuid="2d63292f-c1e9-4611-8b4e-7029f62ad07a" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="UserText" display-name="UserText" uuid="6a84105a-116a-4fcc-9b22-4a28e9ad207c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="15"/>
+		<designed target="Y" value="14"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Width" value="127.5"/>
+		<designed target="Height" value="21"/>
+		<designed target="Text" value="Пользователь:"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="TextAlignment" value="1"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip"/>
+		<designed target="Font" value="Arial,12,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+	</object>
+	<object access-modifier="private" name="PwdEditBox" display-name="PwdEditBox" uuid="a154c412-50eb-4456-a7c9-d5f0bbaa49b0" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9">
+		<designed target="X" value="150"/>
+		<designed target="Y" value="43"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Width" value="192"/>
+		<designed target="Height" value="30"/>
+		<designed target="Text"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="TextAlignment" value="129"/>
+		<designed target="Tooltip"/>
+		<designed target="Font" value="Arial,12,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="HideInput" value="true"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="EditFinished">
+			<body kind="javascript">
+				<![CDATA[LoginButton.Click();]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="LoginButton" display-name="LoginButton" uuid="a8feb3a0-7e4f-4014-98c9-cda249238574" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1">
+		<designed target="X" value="163"/>
+		<designed target="Y" value="90"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Width" value="65"/>
+		<designed target="Height" value="30"/>
+		<designed target="Text" value="ОК"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Tooltip"/>
+		<designed target="Font" value="MS Shell Dlg 2,9,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Enabled" value="true"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed">
+			<body kind="javascript">
+				<![CDATA[var loginName = here.UserComboBox.UserList.GetLoginName(here.UserComboBox.SelectedIndex);
+//Отмена регистрации
+here.SecurityContext.Logout();
+//Попытка регистрации
+here.SecurityContext.AsyncLogin(loginName, PwdEditBox.Text);
+//разрешение на закрытие окна
+here.Action_1.Enabled=true;
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="CloseButton" display-name="CloseButton" uuid="fc57ac68-8f0c-47df-898f-0b9b45c0bc55" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1">
+		<designed target="X" value="233"/>
+		<designed target="Y" value="90"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Width" value="100"/>
+		<designed target="Height" value="30"/>
+		<designed target="Text" value="Отмена"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Tooltip"/>
+		<designed target="Font" value="MS Shell Dlg 2,9,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Enabled" value="true"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="close" event="ButtonPressed"/>
+	</object>
+	<object access-modifier="private" name="PasswordText" display-name="PasswordText" uuid="a1cdf748-b5c7-4a24-91eb-9eefb8e7672c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+		<designed target="X" value="15"/>
+		<designed target="Y" value="49"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Width" value="81"/>
+		<designed target="Height" value="19"/>
+		<designed target="Text" value="Пароль:"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="TextAlignment" value="33"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip"/>
+		<designed target="Font" value="Arial,12,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+	</object>
+	<designed target="WindowCloseMode" value="0"/>
+	<object access-modifier="private" name="Keyboard_1" display-name="Keyboard_1" uuid="da91ee0c-1c88-4ab7-9341-d54003d3f7c9" base-type="Keyboard" base-type-id="9430301f-2693-4c5c-9013-867d8d8f73f4">
+		<designed target="Locale" value="en-US"/>
+	</object>
+	<object access-modifier="private" name="UserComboBox" display-name="UserComboBox" uuid="0f3ab139-f992-4596-99c2-6bb534cc57ca" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc">
+		<designed target="X" value="149"/>
+		<designed target="Y" value="8"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Editable" value="false"/>
+		<designed target="Tooltip"/>
+		<designed target="Width" value="194"/>
+		<designed target="Height" value="30"/>
+		<designed target="Text"/>
+		<designed target="SelectedIndex" value="-1"/>
+		<designed target="Font" value="Arial,12,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<object access-modifier="private" name="UserList" display-name="UserList" uuid="4b3305f9-91af-405b-80d6-419f3ae6f83c" base-type="UserList" base-type-id="7d9c142e-8718-4caa-82be-60ea2ec65981">
+			<init target="SecurityContext" ref="here.SecurityContext"/>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="UpdateFinished">
+				<body kind="javascript">
+					<![CDATA[// Вычищаем сообщение о ходе загрузки
+here.UserComboBox.Clear( );
+
+// Если была ошибка - выводим её
+if( here.UserComboBox.UserList.HasError )
+{
+	here.UserComboBox.AddItem(here.UserComboBox.UserList.Error);
+}
+else
+// Иначе наполняем новым содержимым
+{
+	var curIndex = -1;
+	for( var i = 0; i < Count; ++i )
+	{
+		// Получаем отображаемое имя пользователя и добавляем его в список
+		var user = here.UserComboBox.UserList.GetDisplayName(i);
+		UserComboBox.AddItem( user );
+
+		// Если это текущий пользователь, то запоминаем его индекс
+		if(user == here.SecurityContext.CurrentUserDisplayName)
+			curIndex = i;
+	}
+
+	// Если индекс текущего пользователя определён - выводим
+	if( curIndex >= 0 )
+		UserComboBox.SelectedIndex = curIndex;
+}]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="UpdateStarted">
+				<body kind="javascript">
+					<![CDATA[Clear();
+AddItem("Загрузка списка...");]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="Opened">
+		<body kind="javascript">
+			<![CDATA[here.UserComboBox.UserList.BeginUpdate();
+here.Keyboard_1.Locale="en-US";]]>
+		</body>
+	</do-on>
+	<designed target="WindowBorderStyle" value="2"/>
+	<object access-modifier="private" name="Network_1" display-name="Network_1" uuid="7c67850f-33ba-464b-839e-628a63db86bf" base-type="Network" base-type-id="aa841b9c-0610-4150-8495-3bfad7484a73"/>
+	<object access-modifier="private" name="SERVER" display-name="SERVER" uuid="ab15cc64-b407-4ca4-a7c9-72f1a6ec6d29" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="ParentSource" ref="in_SERVER"/>
+		<init target="Active" value="true"/>
+	</object>
+	<param access-modifier="private" name="in_GenSource" display-name="in_GenSource" uuid="d9a37fa8-12f3-4143-b930-aa46a858e8f7" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d"/>
+	<object access-modifier="private" name="GenSource" display-name="GenSource" uuid="c6ee88fe-01df-4fed-8999-a15fc3743211" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value"/>
+		<init target="Source" ref="SERVER"/>
+		<init target="Path" ref="in_GenSource"/>
+	</object>
+	<object access-modifier="private" name="Action_1" display-name="Action_1" uuid="d9953439-8c7a-430d-942f-3df4fba045e3" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95">
+		<designed target="Enabled" value="false"/>
+		<designed target="InvokeTrigger" value="false"/>
+		<init target="Enabled" value="false"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="close" event="Invoked"/>
+	</object>
+	<object access-modifier="private" name="Image_rus" display-name="Image_rus" uuid="1115df5f-bc19-4b8d-858a-b2f2ace2d2f0" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138">
+		<designed target="X" value="103.33333333333333"/>
+		<designed target="Y" value="49.666666666666671"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip"/>
+		<designed target="Width" value="30"/>
+		<designed target="Height" value="20"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="2"/>
+		<designed target="ImageFile" value="rus"/>
+		<do-trace access-modifier="private" target="Visible">
+			<body>
+				<![CDATA[Str.Equals(Keyboard_1.Locale,"ru-RU")]]>
+			</body>
+		</do-trace>
+		<designed target="Visible" value="true"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[Keyboard_1.Locale="en-US";]]>
+			</body>
+		</do-on>
+		<init target="PenStyle" value="0"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+			<body kind="javascript">
+				<![CDATA[here.Image_rus.PenStyle=1;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[here.Image_rus.PenStyle=0;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Image_eng" display-name="Image_eng" uuid="c57ec020-9062-40dd-b66e-11b50c188d4b" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138">
+		<designed target="X" value="103.22222222222223"/>
+		<designed target="Y" value="49.555555555555571"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip"/>
+		<designed target="Width" value="30"/>
+		<designed target="Height" value="20"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="0"/>
+		<designed target="PenWidth" value="2"/>
+		<designed target="ImageFile" value="eng"/>
+		<do-trace access-modifier="private" target="Visible">
+			<body>
+				<![CDATA[Str.Equals(Keyboard_1.Locale,"en-US")]]>
+			</body>
+		</do-trace>
+		<designed target="Visible" value="true"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[Keyboard_1.Locale="ru-RU";]]>
+			</body>
+		</do-on>
+		<init target="PenStyle" value="0"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[here.Image_eng.PenStyle=1;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseLeave">
+			<body kind="javascript">
+				<![CDATA[here.Image_eng.PenStyle=0;]]>
+			</body>
+		</do-on>
+	</object>
+	<designed target="AlwaysOnTop" value="false"/>
+	<designed target="WindowState" value="0"/>
+	<designed target="MonitorNumber" value="0"/>
+	<designed target="WindowPosition" value="0"/>
+</type>
+

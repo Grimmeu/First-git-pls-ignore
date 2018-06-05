@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<type access-modifier="private" name="Popup_Diag_Modules" display-name="Popup_Diag_Modules" uuid="bd463ead-5639-458d-a49c-5a01913cd4a5" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5">
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<designed target="Width" value="1280"/>
+	<designed target="Height" value="630"/>
+	<designed target="PenColor" value="0xff000000"/>
+	<designed target="PenStyle" value="0"/>
+	<designed target="PenWidth" value="2"/>
+	<designed target="BrushColor" value="0xff254a54"/>
+	<designed target="BrushStyle" value="1"/>
+	<designed target="WindowX" value="0"/>
+	<designed target="WindowY" value="0"/>
+	<designed target="WindowWidth" value="1280"/>
+	<designed target="WindowHeight" value="630"/>
+	<designed target="WindowCaption" value="Диагностика оборудования"/>
+	<designed target="WindowBorderStyle" value="2"/>
+	<designed target="ShowWindowCaption" value="true"/>
+	<designed target="ShowWindowMinimize" value="true"/>
+	<designed target="ShowWindowMaximize" value="true"/>
+	<designed target="ShowWindowClose" value="true"/>
+	<designed target="WindowSizeMode" value="0"/>
+	<designed target="WindowScalingMode" value="0"/>
+	<designed target="WindowCloseMode" value="0"/>
+	<object access-modifier="private" name="Modules" display-name="Modules" uuid="0009c361-f790-4561-adc7-f22343c7b904" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028">
+		<designed target="Active" value="true"/>
+		<designed target="UpdateRate" value="0"/>
+		<init target="Path" value="Modules"/>
+		<init target="ParentSource" ref="in_Object"/>
+	</object>
+	<param access-modifier="private" name="in_Object" display-name="in_Object" uuid="071b9421-886f-45f7-9dab-b7fc8e4cf90f" base-type="OpcSource" base-type-id="87519c51-54a2-4fbf-9709-be83ebcb2028" base-const="true" base-ref="true"/>
+	<designed target="AlwaysOnTop" value="false"/>
+	<designed target="WindowState" value="0"/>
+	<designed target="MonitorNumber" value="0"/>
+	<designed target="WindowPosition" value="0"/>
+	<object access-modifier="private" name="Rectangle_2" display-name="Rectangle_2" uuid="444d91fa-4f34-44f6-92ae-190301491f89" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="1272"/>
+		<designed target="Height" value="43"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xffffffff"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="0xffb0d2d3"/>
+		<designed target="BrushStyle" value="1"/>
+		<object access-modifier="private" name="Server_Name" display-name="Server_Name" uuid="d694331a-3bf1-47ad-8579-b8a4a538a850" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="-1"/>
+			<designed target="Y" value="1"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="1272"/>
+			<designed target="Height" value="43"/>
+			<designed target="Text" value="*************"/>
+			<designed target="Font" value="Arial,14,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="132"/>
+			<do-trace access-modifier="private" target="Text">
+				<body>
+					<![CDATA[Str.Concat(here.Name.Description,". Диагностика модулей")]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="RadialGradient_8" display-name="RadialGradient_8" uuid="c07b4d81-5a11-4dfc-8a8d-9a8e1103deea" base-type="RadialGradient" base-type-id="ec8b2b95-2c92-44b2-a9aa-3ce4fc0f08b9">
+			<designed target="XCenter" value="0.5"/>
+			<designed target="YCenter" value="0.5"/>
+			<object access-modifier="private" name="GradientPoint_1" display-name="GradientPoint_1" uuid="897b8318-b2a8-44dd-932e-900f5a316890" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891">
+				<designed target="Position" value="0.5"/>
+				<designed target="Color" value="0xffb2cbcc"/>
+			</object>
+			<object access-modifier="private" name="GradientPoint_2" display-name="GradientPoint_2" uuid="e3dacc18-b39b-44a9-9c30-2208fe06491e" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891">
+				<designed target="Position" value="1"/>
+				<designed target="Color" value="0xff5d7e7d"/>
+			</object>
+		</object>
+	</object>
+	<object access-modifier="private" name="Rectangle_3" display-name="Rectangle_3" uuid="5efc9e90-d406-4fc9-8739-1fa21db9af8e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="188"/>
+		<designed target="Y" value="143"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="895.86885245901613"/>
+		<designed target="Height" value="29"/>
+		<designed target="RoundingRadius" value="5"/>
+		<designed target="PenColor" value="0xffffffff"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="80e0d425-d880-4c6d-85ed-80adf062ab80" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="523"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="366.33333333333326"/>
+			<designed target="Height" value="21.666666666666686"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xffe8e8e8"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd8d8d8"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="0706e1ff-bbbc-4127-a4b3-1fe900ca8a87" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="1"/>
+				<designed target="Y" value="0.39999999999999858"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="363.60000000000014"/>
+				<designed target="Height" value="21.600000000000016"/>
+				<designed target="Text" value="В работе"/>
+				<designed target="Font" value="MS Shell Dlg 2,9,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+				<do-trace access-modifier="private" target="Text">
+					<conditional-expr>
+						<condition>
+							<![CDATA[here.ReduActive.Value==0]]>
+						</condition>
+						<expr>
+							<![CDATA["Не в работе"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA["В работе"]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[here.ReduActive.Value==0]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffd8d8d8]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="f19a4a5c-3572-4e37-8343-4bbe14d7d369" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="21.600000000000001"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="397.59999999999991"/>
+			<designed target="Height" value="21.200000000000003"/>
+			<designed target="Text" value="Модуль резервирования"/>
+			<designed target="Font" value="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="33"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="ReduActive" display-name="ReduActive" uuid="c98eea4a-3467-4a04-a447-969593b2d19a" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="ReduActive"/>
+		<init target="Source" ref="here.Modules"/>
+	</object>
+	<object access-modifier="private" name="Name" display-name="Name" uuid="0b9fc0f1-5a2f-47b5-9ce2-db624e659937" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value=""/>
+		<init target="Source" ref="here.in_Object"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_4" display-name="Rectangle_4" uuid="7e2a89e3-4f33-46c2-a2e8-865f919a22f3" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="188"/>
+		<designed target="Y" value="176"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="895.86885245901613"/>
+		<designed target="Height" value="29"/>
+		<designed target="RoundingRadius" value="5"/>
+		<designed target="PenColor" value="0xffffffff"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="b7fa891d-9202-4438-9863-030aca4299b8" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="523"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="366.33333333333326"/>
+			<designed target="Height" value="21.666666666666686"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xffe8e8e8"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd8d8d8"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="fbc17a48-1604-49d5-868b-167568d90e93" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="1"/>
+				<designed target="Y" value="0.39999999999999858"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="363.60000000000014"/>
+				<designed target="Height" value="21.600000000000016"/>
+				<designed target="Text" value="В работе"/>
+				<designed target="Font" value="MS Shell Dlg 2,9,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+				<do-trace access-modifier="private" target="Text">
+					<conditional-expr>
+						<condition>
+							<![CDATA[here.IECActive.Value==0]]>
+						</condition>
+						<expr>
+							<![CDATA["Не в работе"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA["В работе"]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[here.IECActive.Value==0]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffd8d8d8]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="91089acd-46a5-4026-a9c9-7d5195f50f29" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="21.600000000000001"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="397.59999999999991"/>
+			<designed target="Height" value="21.200000000000003"/>
+			<designed target="Text" value="Модуль МЭК (IEC Master)"/>
+			<designed target="Font" value="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="33"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="IECActive" display-name="IECActive" uuid="3085022a-c01b-45a5-a3bb-c96546d3ec91" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Source" ref="here.Modules"/>
+		<init target="Path" value="IECActive"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_5" display-name="Rectangle_5" uuid="c9931767-2494-4e31-98d3-6fab795871bd" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="188"/>
+		<designed target="Y" value="209"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="895.86885245901613"/>
+		<designed target="Height" value="29"/>
+		<designed target="RoundingRadius" value="5"/>
+		<designed target="PenColor" value="0xffffffff"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="212e3885-5c92-4e43-9b5a-7f448fe2d7c5" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="523"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="366.33333333333326"/>
+			<designed target="Height" value="21.666666666666686"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xffe8e8e8"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd8d8d8"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="bff01b21-0655-49dd-8022-fd3f10748b4f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="1"/>
+				<designed target="Y" value="0.39999999999999858"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="363.60000000000014"/>
+				<designed target="Height" value="21.600000000000016"/>
+				<designed target="Text" value="В работе"/>
+				<designed target="Font" value="MS Shell Dlg 2,9,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+				<do-trace access-modifier="private" target="Text">
+					<conditional-expr>
+						<condition>
+							<![CDATA[here.UAActive.Value==0]]>
+						</condition>
+						<expr>
+							<![CDATA["Не в работе"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA["В работе"]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[here.UAActive.Value==0]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffd8d8d8]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="c79493ff-d34a-4211-8e75-318befca11d7" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="21.600000000000001"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="397.59999999999991"/>
+			<designed target="Height" value="21.200000000000003"/>
+			<designed target="Text" value="Модуль OPC UA"/>
+			<designed target="Font" value="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="33"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Rectangle_6" display-name="Rectangle_6" uuid="f71fef20-2027-4afd-9987-0cfa2de2be7b" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="189"/>
+		<designed target="Y" value="242"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="895.86885245901613"/>
+		<designed target="Height" value="29"/>
+		<designed target="RoundingRadius" value="5"/>
+		<designed target="PenColor" value="0xffffffff"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="4f807060-3c1d-4ab0-9e4e-6546cc243e93" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="523"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="366.33333333333326"/>
+			<designed target="Height" value="21.666666666666686"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xffe8e8e8"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd8d8d8"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="697cfb52-e64d-4bc5-af17-a613323e9819" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="1"/>
+				<designed target="Y" value="0.39999999999999858"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="363.60000000000014"/>
+				<designed target="Height" value="21.600000000000016"/>
+				<designed target="Text" value="В работе"/>
+				<designed target="Font" value="MS Shell Dlg 2,9,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+				<do-trace access-modifier="private" target="Text">
+					<conditional-expr>
+						<condition>
+							<![CDATA[here.AEActive.Value==0]]>
+						</condition>
+						<expr>
+							<![CDATA["Не в работе"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA["В работе"]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[here.AEActive.Value==0]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffd8d8d8]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="d9e79e3d-456b-4b85-907b-2510e1289829" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="21.600000000000001"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="397.59999999999991"/>
+			<designed target="Height" value="21.200000000000003"/>
+			<designed target="Text" value="Модуль OPC AE"/>
+			<designed target="Font" value="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="33"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="UAActive" display-name="UAActive" uuid="144961d6-a129-4fe2-8ad7-bf1502ee4195" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Source" ref="here.Modules"/>
+		<init target="Path" value="UAActive"/>
+	</object>
+	<object access-modifier="private" name="AEActive" display-name="AEActive" uuid="5ff98411-f6aa-4feb-8e6c-e9d290da192c" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Source" ref="here.Modules"/>
+		<init target="Path" value="AEActive"/>
+	</object>
+	<object access-modifier="private" name="Hist1Active" display-name="Hist1Active" uuid="f4f13ef0-f54a-4110-a395-4aa95586bd0c" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Source" ref="here.Modules"/>
+		<init target="Path" value="Hist1Active"/>
+	</object>
+	<object access-modifier="private" name="Hist2Active" display-name="Hist2Active" uuid="42e18643-c352-4e39-8d13-0b3ecf6789b9" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Source" ref="here.Modules"/>
+		<init target="Path" value="Hist2Active"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_7" display-name="Rectangle_7" uuid="038a2aa0-f4a1-4ee0-a99f-156c20f502e7" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="189"/>
+		<designed target="Y" value="274"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="895.86885245901613"/>
+		<designed target="Height" value="29"/>
+		<designed target="RoundingRadius" value="5"/>
+		<designed target="PenColor" value="0xffffffff"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="8702dde2-9ab8-450b-9b43-8c194c857690" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="523"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="366.33333333333326"/>
+			<designed target="Height" value="21.666666666666686"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xffe8e8e8"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd8d8d8"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="47f49b19-e08a-4b38-b125-fbd9ce63d649" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="1"/>
+				<designed target="Y" value="0.39999999999999858"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="363.60000000000014"/>
+				<designed target="Height" value="21.600000000000016"/>
+				<designed target="Text" value="В работе"/>
+				<designed target="Font" value="MS Shell Dlg 2,9,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+				<do-trace access-modifier="private" target="Text">
+					<conditional-expr>
+						<condition>
+							<![CDATA[here.Hist1Active.Value==0]]>
+						</condition>
+						<expr>
+							<![CDATA["Не в работе"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA["В работе"]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[here.Hist1Active.Value==0]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffd8d8d8]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="4671880f-5018-4ba4-b7f2-269d33a2d87f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="21.600000000000001"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="397.59999999999991"/>
+			<designed target="Height" value="21.200000000000003"/>
+			<designed target="Text" value="Модуль Истории 1"/>
+			<designed target="Font" value="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="33"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Rectangle_8" display-name="Rectangle_8" uuid="1be9cfde-69a3-4424-98e0-5bdfadd4fd95" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="190"/>
+		<designed target="Y" value="307"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="895.86885245901613"/>
+		<designed target="Height" value="29"/>
+		<designed target="RoundingRadius" value="5"/>
+		<designed target="PenColor" value="0xffffffff"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="83016da8-bf95-42f5-bee6-54db30fe5314" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="523"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="366.33333333333326"/>
+			<designed target="Height" value="21.666666666666686"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xffe8e8e8"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd8d8d8"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="39e0290b-e971-490d-a9d6-c4f26dcaf075" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="1"/>
+				<designed target="Y" value="0.39999999999999858"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="363.60000000000014"/>
+				<designed target="Height" value="21.600000000000016"/>
+				<designed target="Text" value="В работе"/>
+				<designed target="Font" value="MS Shell Dlg 2,9,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+				<do-trace access-modifier="private" target="Text">
+					<conditional-expr>
+						<condition>
+							<![CDATA[here.Hist2Active.Value==0]]>
+						</condition>
+						<expr>
+							<![CDATA["Не в работе"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA["В работе"]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[here.Hist2Active.Value==0]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffd8d8d8]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="bec8befa-b1bd-4fa7-b458-872896a46655" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="21.600000000000001"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="397.59999999999991"/>
+			<designed target="Height" value="21.200000000000003"/>
+			<designed target="Text" value="Модуль Истории 2"/>
+			<designed target="Font" value="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="33"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="NetDiagActive" display-name="NetDiagActive" uuid="7d00279d-1c42-4767-aac3-2de2e4800483" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Source" ref="here.Modules"/>
+		<init target="Path" value="NetDiagActive"/>
+	</object>
+	<object access-modifier="private" name="SNMPActive" display-name="SNMPActive" uuid="18d74230-64b7-46ac-99a7-6b23cb495076" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Source" ref="here.Modules"/>
+		<init target="Path" value="SNMPActive"/>
+	</object>
+	<object access-modifier="private" name="LogicActive" display-name="LogicActive" uuid="e65b83d4-5a7d-4fb9-98c6-84d2b0457e4d" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Source" ref="here.Modules"/>
+		<init target="Path" value="LogicActive"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_9" display-name="Rectangle_9" uuid="9100264d-1d58-4961-9abf-c07602312857" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="189"/>
+		<designed target="Y" value="341"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="895.86885245901613"/>
+		<designed target="Height" value="29"/>
+		<designed target="RoundingRadius" value="5"/>
+		<designed target="PenColor" value="0xffffffff"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="8f839539-b876-4cc5-8485-fbdbc521ac77" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="523"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="366.33333333333326"/>
+			<designed target="Height" value="21.666666666666686"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xffe8e8e8"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd8d8d8"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="6cc260d2-df65-41d2-90bb-ba9c7ef5e3c2" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="1"/>
+				<designed target="Y" value="0.39999999999999858"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="363.60000000000014"/>
+				<designed target="Height" value="21.600000000000016"/>
+				<designed target="Text" value="В работе"/>
+				<designed target="Font" value="MS Shell Dlg 2,9,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+				<do-trace access-modifier="private" target="Text">
+					<conditional-expr>
+						<condition>
+							<![CDATA[here.SNMPActive.Value==0]]>
+						</condition>
+						<expr>
+							<![CDATA["Не в работе"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA["В работе"]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[here.SNMPActive.Value==0]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffd8d8d8]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="52435e4b-3197-4bfb-92fc-1dc6bf059ea0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="21.600000000000001"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="397.59999999999991"/>
+			<designed target="Height" value="21.200000000000003"/>
+			<designed target="Text" value="Модуль SNMP"/>
+			<designed target="Font" value="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="33"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Rectangle_10" display-name="Rectangle_10" uuid="f5f1f4b8-acc3-4f8c-9768-f920face3fec" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="189"/>
+		<designed target="Y" value="374"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="895.86885245901613"/>
+		<designed target="Height" value="29"/>
+		<designed target="RoundingRadius" value="5"/>
+		<designed target="PenColor" value="0xffffffff"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="98cbdaac-ccc2-4299-bfab-90c21543c3ae" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="523"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="366.33333333333326"/>
+			<designed target="Height" value="21.666666666666686"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xffe8e8e8"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd8d8d8"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="f4078e02-23e1-4924-b2ad-0d7e6be2659f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="1"/>
+				<designed target="Y" value="0.39999999999999858"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="363.60000000000014"/>
+				<designed target="Height" value="21.600000000000016"/>
+				<designed target="Text" value="В работе"/>
+				<designed target="Font" value="MS Shell Dlg 2,9,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+				<do-trace access-modifier="private" target="Text">
+					<conditional-expr>
+						<condition>
+							<![CDATA[here.NetDiagActive.Value==0]]>
+						</condition>
+						<expr>
+							<![CDATA["Не в работе"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA["В работе"]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[here.NetDiagActive.Value==0]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffd8d8d8]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="31a8e09b-543b-4e69-8f4e-5fff7ed5cc9d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="21.600000000000001"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="397.59999999999991"/>
+			<designed target="Height" value="21.200000000000003"/>
+			<designed target="Text" value="Модуль NetDiag"/>
+			<designed target="Font" value="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="33"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Rectangle_11" display-name="Rectangle_11" uuid="dbc6bd69-ddf8-445d-8d55-d9d8fa271693" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="190"/>
+		<designed target="Y" value="407"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="895.86885245901613"/>
+		<designed target="Height" value="29"/>
+		<designed target="RoundingRadius" value="5"/>
+		<designed target="PenColor" value="0xffffffff"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="ba294883-79c7-42d6-b3cd-5ff838c4885a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+			<designed target="X" value="523"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="366.33333333333326"/>
+			<designed target="Height" value="21.666666666666686"/>
+			<designed target="RoundingRadius" value="0"/>
+			<designed target="PenColor" value="0xffe8e8e8"/>
+			<designed target="PenStyle" value="1"/>
+			<designed target="PenWidth" value="1"/>
+			<designed target="BrushColor" value="0xffd8d8d8"/>
+			<designed target="BrushStyle" value="1"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="b4ec32eb-91d2-4492-b253-73801b099157" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+				<designed target="X" value="1"/>
+				<designed target="Y" value="0.39999999999999858"/>
+				<designed target="Rotation" value="0"/>
+				<designed target="Scale" value="1"/>
+				<designed target="Visible" value="true"/>
+				<designed target="Enabled" value="true"/>
+				<designed target="Tooltip" value=""/>
+				<designed target="Width" value="363.60000000000014"/>
+				<designed target="Height" value="21.600000000000016"/>
+				<designed target="Text" value="В работе"/>
+				<designed target="Font" value="MS Shell Dlg 2,9,-1,5,75,0,0,0,0,0"/>
+				<designed target="FontColor" value="4278190080"/>
+				<designed target="TextAlignment" value="132"/>
+				<do-trace access-modifier="private" target="Text">
+					<conditional-expr>
+						<condition>
+							<![CDATA[here.LogicActive.Value==0]]>
+						</condition>
+						<expr>
+							<![CDATA["Не в работе"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA["В работе"]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor">
+				<conditional-expr>
+					<condition>
+						<![CDATA[here.LogicActive.Value==0]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffff0000]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffd8d8d8]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="a914b20b-8603-4406-b6aa-b439ccb9587f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="21.600000000000001"/>
+			<designed target="Y" value="4"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="397.59999999999991"/>
+			<designed target="Height" value="21.200000000000003"/>
+			<designed target="Text" value="Модуль Логики"/>
+			<designed target="Font" value="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="0xffffffff"/>
+			<designed target="TextAlignment" value="33"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Button_1" display-name="Button_1" uuid="3856ab3f-b9fb-4c8b-8e05-8b85f2cb7709" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1">
+		<designed target="X" value="191"/>
+		<designed target="Y" value="452"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="193"/>
+		<designed target="Height" value="62"/>
+		<designed target="Text" value="Статистика сервера"/>
+		<designed target="Font" value="Arial,12,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="ButtonPressed">
+			<app path="C:\Program Files\Automiq\Alpha.AccessPointEMS\Service\APStatistics.exe" command-line="-port:4573 -address:{IP}">
+				<alias name="IP">
+					<expr>
+						<![CDATA[here.IP.ValueAsString]]>
+					</expr>
+				</alias>
+			</app>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="IP" display-name="IP" uuid="5646ce7a-b0fd-42c3-8f48-fcb1ff97c9b8" base-type="OpcItem" base-type-id="377e4ff8-80e0-45a2-8600-0045db2be05b">
+		<designed target="Value" value=""/>
+		<init target="Path" value="Ping.Ipaddress"/>
+		<init target="Source" ref="here.in_Object"/>
+	</object>
+	<object access-modifier="private" name="Button_4" display-name="Button_4" uuid="58adf33f-b2b8-4fb6-8071-b941230e443c" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1">
+		<designed target="X" value="398"/>
+		<designed target="Y" value="452"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="193"/>
+		<designed target="Height" value="62"/>
+		<designed target="Text" value="Статистика сервера
+истории"/>
+		<designed target="Font" value="Arial,12,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="ButtonPressed">
+			<app path="C:\Program Files\Automiq\Alpha.AccessPointEMS\Service\APStatistics.exe" command-line="-port:3388 -address:{IP}">
+				<alias name="IP">
+					<expr>
+						<![CDATA[here.IP.ValueAsString]]>
+					</expr>
+				</alias>
+			</app>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Button_5" display-name="Button_5" uuid="d1345cf6-c217-4c04-bcf3-9c24d7d71a99" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1">
+		<designed target="X" value="605"/>
+		<designed target="Y" value="452"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="193"/>
+		<designed target="Height" value="62"/>
+		<designed target="Text" value="Лицензии"/>
+		<designed target="Font" value="Arial,12,-1,5,75,0,0,0,0,0"/>
+		<designed target="FontColor" value="4278190080"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="ButtonPressed">
+			<app path="C:\Program Files\Automiq\Alpha.AccessPointEMS\Service\APStatistics.exe" command-line="-port:4390 -address:{IP}">
+				<alias name="IP">
+					<expr>
+						<![CDATA[here.IP.ValueAsString]]>
+					</expr>
+				</alias>
+			</app>
+		</do-on>
+	</object>
+</type>
+
